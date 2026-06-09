@@ -47,25 +47,32 @@ img{display:block;max-width:100%}
 .nav-cta:hover{background:rgba(255,255,255,0.82) !important}
 
 /* ── HERO ── */
-.hero{position:relative;display:flex;align-items:center;justify-content:center;min-height:100vh;padding-top:68px;background:var(--night);overflow:hidden}
+.hero{position:relative;display:grid;grid-template-columns:55fr 45fr;min-height:100vh;padding-top:68px;background:var(--night);overflow:hidden}
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}
-.hero-scrim{position:absolute;inset:0;z-index:1;background:rgba(0,0,0,0.5)}
-.hero-left{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:4rem var(--g);max-width:900px;margin:0 auto}
+.hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(to right,rgba(0,0,0,0.72) 0%,rgba(0,0,0,0.4) 60%,rgba(0,0,0,0.2) 100%)}
+.hero-left{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:4rem var(--g)}
 .hero-eyebrow{font-size:0.72rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold2);margin-bottom:1rem}
 .hero-kicker{font-family:var(--serif);font-size:1.5rem;font-weight:500;color:rgba(255,255,255,0.85);margin-bottom:0.8rem;font-style:italic}
 .hero-title{font-family:var(--serif);font-size:clamp(3rem,5vw,5.5rem);font-weight:700;line-height:1.06;color:#FFFFFF;letter-spacing:0.005em;margin-bottom:1rem;text-shadow:0 3px 24px rgba(0,0,0,0.55)}
-.hero-sub{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:rgba(255,255,255,0.85);margin-bottom:1.5rem;max-width:600px;margin-left:auto;margin-right:auto}
-.hero-body{font-size:0.95rem;line-height:1.8;color:rgba(255,255,255,0.82);max-width:640px;margin-bottom:2.25rem;margin-left:auto;margin-right:auto}
+.hero-sub{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:rgba(255,255,255,0.85);margin-bottom:1.5rem;max-width:480px}
+.hero-body{font-size:0.95rem;line-height:1.8;color:rgba(255,255,255,0.82);max-width:460px;margin-bottom:2.25rem}
 .hero-body p{margin-bottom:0.9rem}
 .hero-body p:last-child{margin-bottom:0}
-.hero-btns{display:flex;align-items:center;justify-content:center;gap:1.25rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.hero-btns{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin-bottom:2.5rem}
 .btn-solid{background:var(--gold);color:var(--night);padding:0.9rem 2.2rem;font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;border:none;cursor:pointer;display:inline-block;transition:background .2s,transform .2s;border-radius:4px}
 .btn-solid:hover{background:var(--gold2);transform:translateY(-2px)}
 .btn-ghost{font-size:0.72rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.92);border-bottom:1px solid rgba(143,192,222,0.6);padding-bottom:0.15rem;transition:color .2s,border-color .2s}
 .btn-ghost:hover{color:#fff;border-color:var(--gold2)}
-.hero-stats{display:flex;justify-content:center;gap:3rem;padding-top:2.5rem;border-top:1px solid rgba(143,192,222,0.3);width:100%;max-width:700px;margin-left:auto;margin-right:auto}
+.hero-stats{display:flex;gap:2.5rem;padding-top:2rem;border-top:1px solid rgba(143,192,222,0.3)}
 .hstat-n{display:block;font-family:var(--serif);font-size:2.2rem;font-weight:600;color:#FCFEFF;line-height:1}
 .hstat-l{font-size:0.62rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-top:0.3rem}
+
+/* HERO FORM PANEL */
+.hero-right{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;padding:4rem 3rem 4rem 1rem}
+.hero-form-card{background:rgba(14,36,56,0.92);backdrop-filter:blur(12px);border:1px solid rgba(111,168,206,0.3);border-radius:18px;padding:2.5rem 2rem;width:100%;max-width:400px;position:relative}
+.hero-form-card::before{content:'';position:absolute;top:0;left:2rem;right:2rem;height:3px;background:linear-gradient(90deg,transparent,var(--gold2),transparent);border-radius:2px}
+.hero-form-card h3{font-family:var(--serif);font-size:1.6rem;font-weight:600;color:rgba(255,255,255,0.96);margin-bottom:0.25rem}
+.hero-form-card .form-sub{font-size:0.76rem;color:rgba(255,255,255,0.3);margin-bottom:1.5rem}
 
 /* ── TICKER ── */
 .ticker{background:var(--night2);overflow:hidden;padding:0.88rem 0;border-top:1px solid rgba(111,168,206,0.12);border-bottom:1px solid rgba(111,168,206,0.12)}
@@ -399,7 +406,42 @@ img{display:block;max-width:100%}
     </div>
   </div>
 
-  <!-- Right: Form Panel (Removed) -->
+  <!-- Right: Form Panel -->
+  <div class="hero-right">
+    <div class="hero-form-card">
+      <h3>Request a Personalised Wedding Proposal</h3>
+      <p class="form-sub">Response within 24 hours</p>
+      <div class="fg"><label>Your Name *</label><input type="text" placeholder="Full name" id="hFullName"/></div>
+      <div class="fg"><label>Email Address *</label><input type="email" placeholder="you@email.com" id="hEmail"/></div>
+      <div class="fg"><label>Phone / WhatsApp *</label><input type="tel" placeholder="+1 (___) ___-____" id="hPhone"/></div>
+      <div class="fg"><label>Wedding Date</label><input type="date" style="color-scheme:dark" id="hDate"/></div>
+      <div class="fg">
+        <label>Estimated Guest Count *</label>
+        <select id="hGuests">
+          <option value="">Select</option>
+          <option>Under 50</option>
+          <option>50 – 100</option>
+          <option>100 – 200</option>
+          <option>200 – 350</option>
+          <option>350 – 500</option>
+          <option>500+</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>Preferred Destination</label>
+        <select id="hDest">
+          <option value="">Select</option>
+          <option>Los Cabos</option>
+          <option>Cancún</option>
+          <option>Puerto Vallarta</option>
+          <option>Punta Cana</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <button class="form-btn" onclick="handleHeroSubmit(this)">Request a Personalised Wedding Proposal</button>
+      <p class="form-note">Your details remain private. A dedicated specialist will respond within 24 hours, no spam, no obligation.</p>
+    </div>
+  </div>
 </div>
 
 <!-- ══ SECTION 3: TRUST SNAPSHOT ══ -->
@@ -820,64 +862,7 @@ img{display:block;max-width:100%}
   </div>
 </section>
 
-<!-- ══ SECTION 11: CONCIERGE SERVICES ══ -->
-<section class="sec sec-dark" id="services">
-  <div class="sec-hd sec-hd-c" style="position:relative;z-index:1">
-    <div class="eyebrow" style="color:var(--gold2);justify-content:center">Effortless Celebrations Managed by the Experts</div>
-    <div class="divider divider--center divider--light"><div class="divider-diamond"></div></div>
-    <h2 class="sec-title lt">We Manage the Logistics,<br/><em>You Experience the Magic.</em></h2>
-  </div>
-  <div class="svc-rows">
-    <div class="svc-row"><span class="svc-ic">📋</span><h4>Multi-Day Strategy &amp; Design</h4><p>From master timelines to décor layouts and on-ground execution — every detail designed, aligned, and flawlessly delivered.</p></div>
-    <div class="svc-row"><span class="svc-ic">✈</span><h4>Smart Guest Travel &amp; Room Blocks</h4><p>We handle everything from flights to luxury stays to airport transfers, ensuring a smooth arrival experience for all.</p></div>
-    <div class="svc-row"><span class="svc-ic">🍽</span><h4>Curated Culinary Management</h4><p>Signature dining experiences with live cooking stations, curated menus, and immersive multi-day food journeys.</p></div>
-    <div class="svc-row"><span class="svc-ic">🔊</span><h4>Production &amp; Sound Mastery</h4><p>Complete technical execution including lighting design, sound engineering, and vendor coordination for breathtaking outdoor celebrations.</p></div>
-  </div>
-</section>
 
-<!-- ══ SECTION 12: CEREMONIES ══ -->
-<section class="sec sec-ivory3" id="ceremonies">
-  <div class="sec-hd sec-hd-c">
-    <div class="eyebrow">How Your Wedding Days Take Shape</div>
-    <div class="divider divider--center"><div class="divider-diamond"></div></div>
-    <h2 class="sec-title">Everything That Matters, In The<br/><em>Most Beautiful Wedding Destination.</em></h2>
-  </div>
-  <div class="journey-scroll-wrap" id="journeyScroll">
-    <div class="journey-track" id="journeyTrack">
-      <div class="jstep" data-day="0">
-        <div class="jdot">1</div>
-        <div>
-          <div class="jday-l">Day One  |  Welcome, Haldi &amp; Mehndi</div>
-          <div class="jtitle">Arrival &amp; The First Celebration</div>
-          <div class="jbody">The first day is really just about arriving. The Haldi ceremony happens the way it always does — messy, loud, and over too quickly. Then the Mehndi night, where the evening stretches out and nobody's in a rush yet.</div>
-        </div>
-      </div>
-      <div class="jstep" data-day="1">
-        <div class="jdot">2</div>
-        <div>
-          <div class="jday-l">Day Two  |  The High-Energy Sangeet</div>
-          <div class="jtitle">The High-Energy Sangeet</div>
-          <div class="jbody">An unforgettable evening of choreographed Bollywood performances, custom lighting setups, live entertainment, and a proper spread. Held across our beachfront venues, a proper celebration for all generations.</div>
-        </div>
-      </div>
-      <div class="jstep" data-day="2">
-        <div class="jdot">3</div>
-        <div>
-          <div class="jday-l">Day Three  |  Wedding Ceremony &amp; Grand Reception</div>
-          <div class="jtitle">Wedding Ceremony &amp; Grand Reception</div>
-          <div class="jbody">A breathtaking beachfront Baraat procession leads directly into sacred vows at a beautiful floral altar. Then dinner, toasts, dancing, and the kind of ending that takes a while to come because no one quite wants to leave.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Mobile dots indicator -->
-  <div class="journey-dots" id="journeyDots">
-    <span class="active" onclick="scrollToDay(0)"></span>
-    <span onclick="scrollToDay(1)"></span>
-    <span onclick="scrollToDay(2)"></span>
-  </div>
-  <p class="journey-closing">We handle the planning for your multi-day Indian wedding. You take care of being there.</p>
-</section>
 
 <!-- ══ SECTION 13: SOCIAL PROOF / TESTIMONIALS ══ -->
 <section class="sec sec-ivory" id="testimonials">
@@ -918,45 +903,7 @@ img{display:block;max-width:100%}
   </div>
 </section>
 
-<!-- ══ SECTION 14: EXCLUSIVE PRIVILEGES ══ -->
-<section class="sec sec-ivory3" id="privileges">
-  <div class="sec-hd">
-    <div class="eyebrow">Curated Destination Wedding Benefits</div>
-    <div class="divider"><div class="divider-diamond"></div></div>
-    <h2 class="sec-title">Designed for the Couple<br/><em>and their Guests</em></h2>
-    <p class="body" style="margin-top:0.9rem">A suite of privileges built to make your South Asian celebration effortless and exceptional.</p>
-  </div>
-  <div class="ben-layout">
-    <div>
-      <div style="font-size:0.62rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold4);margin-bottom:1rem">DESIGNED FOR THE COUPLE</div>
-      <div class="bi"><span class="bd">1</span><div><h5>Complimentary Suite Upgrade</h5><p>Upgrade for the wedding couple in the resort's best room category.</p></div></div>
-      <div class="bi"><span class="bd">2</span><div><h5>Priority Wedding Dates</h5><p>Priority access for preferred wedding dates and event spaces.</p></div></div>
-      <div class="bi"><span class="bd">3</span><div><h5>Couples Spa Ritual</h5><p>Couples spa ritual at Pevonia® Spa.</p></div></div>
-      <div class="bi"><span class="bd">4</span><div><h5>Personal Dedicated Wedding Concierge</h5><p>Your own resort liaison for planning, vendor coordination, and guest care.</p></div></div>
-      <div style="font-size:0.62rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold4);margin-top:1.5rem;margin-bottom:1rem">DESIGNED FOR THE GUESTS</div>
-      <div class="bi"><span class="bd">5</span><div><h5>Complimentary Room Allocation</h5><p>One complimentary room for every ten rooms booked.</p></div></div>
-      <div class="bi"><span class="bd">6</span><div><h5>Unlimited Dining, Drinks &amp; Entertainment</h5><p>All-inclusive stays with premium culinary experiences and resort activities for every visitor.</p></div></div>
-      <div class="bi"><span class="bd">7</span><div><h5>Curated Welcome Celebration</h5><p>A personalized arrival reception designed for your family and guests.</p></div></div>
-    </div>
-    <div class="ben-cards">
-      <div class="bcard dark">
-        <div class="bcard-lbl">Designed for the Couple</div>
-        <div class="bcard-title">Suite Upgrade &amp; Priority Access</div>
-        <div class="bcard-body">A private experience tailored to your ceremony, stay, and every key moment at the resort.</div>
-      </div>
-      <div class="bcard">
-        <div class="bcard-lbl">Designed for the Guests</div>
-        <div class="bcard-title">Unlimited Dining, Drinks &amp; Entertainment</div>
-        <div class="bcard-body">All-inclusive stays with premium culinary experiences and resort activities for every visitor.</div>
-      </div>
-      <div class="bcard">
-        <div class="bcard-lbl">Complimentary Benefit</div>
-        <div class="bcard-title">1 Room Free Per 10 Rooms Booked</div>
-        <div class="bcard-body">Smart room block management that rewards your guest group with complimentary accommodation.</div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- ══ SECTION 15: FINAL CTA + LEAD FORM ══ -->
 <section class="sec sec-ivory2" id="consult">
