@@ -212,6 +212,7 @@ img{display:block;max-width:100%}
 .svc-row p{font-size:0.88rem;color:rgba(255,255,255,0.58);line-height:1.65}
 
 /* ── CEREMONIES ── */
+.journey-scroll-wrap{overflow:hidden}
 .journey-track{display:grid;grid-template-columns:repeat(3,1fr);margin-top:2.75rem;position:relative;gap:0}
 .journey-track::before{content:'';position:absolute;top:26px;left:calc(10% + 26px);right:calc(10% + 26px);height:1px;background:linear-gradient(90deg,transparent,var(--gold2),transparent);opacity:0.5}
 .jstep{text-align:center;padding:0 1rem;position:relative;z-index:1}
@@ -221,6 +222,21 @@ img{display:block;max-width:100%}
 .jtitle{font-family:var(--serif);font-size:1.12rem;font-weight:600;color:var(--ink);margin-bottom:0.6rem}
 .jbody{font-size:0.83rem;color:var(--muted);line-height:1.65}
 .journey-closing{text-align:center;margin-top:3rem;font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--muted);max-width:500px;margin-left:auto;margin-right:auto}
+/* Journey scroll dots */
+.journey-dots{display:none;justify-content:center;gap:0.5rem;margin-top:1.5rem}
+.journey-dots span{width:8px;height:8px;border-radius:50%;background:var(--bdr2);transition:background .25s,transform .25s;cursor:pointer}
+.journey-dots span.active{background:var(--gold4);transform:scale(1.3)}
+/* Mobile: horizontal swipe carousel */
+@media(max-width:700px){
+  .journey-scroll-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;scroll-behavior:smooth;padding:0 var(--g) 1rem;margin:0 calc(-1 * var(--g));cursor:grab}
+  .journey-scroll-wrap:active{cursor:grabbing}
+  .journey-track{display:flex;flex-wrap:nowrap;gap:1.2rem;margin-top:2rem;padding:0 var(--g);width:max-content;position:static}
+  .journey-track::before{display:none}
+  .jstep{flex:0 0 78vw;max-width:300px;scroll-snap-align:center;background:var(--ivory);border:1px solid var(--bdr2);border-radius:16px;padding:2rem 1.5rem;text-align:left;box-shadow:0 6px 24px rgba(14,36,56,0.08)}
+  .jstep .jdot{margin:0 0 1rem 0}
+  .journey-dots{display:flex}
+  .journey-closing{margin-top:1.5rem}
+}
 
 /* ── TESTIMONIALS ── */
 .tgrid{display:flex;gap:1.5rem;margin-top:2.75rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1rem;-webkit-overflow-scrolling:touch}
@@ -868,31 +884,39 @@ img{display:block;max-width:100%}
     <div class="divider divider--center"><div class="divider-diamond"></div></div>
     <h2 class="sec-title">Everything That Matters, In The<br/><em>Most Beautiful Wedding Destination.</em></h2>
   </div>
-  <div class="journey-track">
-    <div class="jstep">
-      <div class="jdot">1</div>
-      <div>
-        <div class="jday-l">Day One  |  Welcome, Haldi &amp; Mehndi</div>
-        <div class="jtitle">Arrival &amp; The First Celebration</div>
-        <div class="jbody">The first day is really just about arriving. The Haldi ceremony happens the way it always does — messy, loud, and over too quickly. Then the Mehndi night, where the evening stretches out and nobody's in a rush yet.</div>
+  <div class="journey-scroll-wrap" id="journeyScroll">
+    <div class="journey-track" id="journeyTrack">
+      <div class="jstep" data-day="0">
+        <div class="jdot">1</div>
+        <div>
+          <div class="jday-l">Day One  |  Welcome, Haldi &amp; Mehndi</div>
+          <div class="jtitle">Arrival &amp; The First Celebration</div>
+          <div class="jbody">The first day is really just about arriving. The Haldi ceremony happens the way it always does — messy, loud, and over too quickly. Then the Mehndi night, where the evening stretches out and nobody's in a rush yet.</div>
+        </div>
+      </div>
+      <div class="jstep" data-day="1">
+        <div class="jdot">2</div>
+        <div>
+          <div class="jday-l">Day Two  |  The High-Energy Sangeet</div>
+          <div class="jtitle">The High-Energy Sangeet</div>
+          <div class="jbody">An unforgettable evening of choreographed Bollywood performances, custom lighting setups, live entertainment, and a proper spread. Held across our beachfront venues, a proper celebration for all generations.</div>
+        </div>
+      </div>
+      <div class="jstep" data-day="2">
+        <div class="jdot">3</div>
+        <div>
+          <div class="jday-l">Day Three  |  Wedding Ceremony &amp; Grand Reception</div>
+          <div class="jtitle">Wedding Ceremony &amp; Grand Reception</div>
+          <div class="jbody">A breathtaking beachfront Baraat procession leads directly into sacred vows at a beautiful floral altar. Then dinner, toasts, dancing, and the kind of ending that takes a while to come because no one quite wants to leave.</div>
+        </div>
       </div>
     </div>
-    <div class="jstep">
-      <div class="jdot">2</div>
-      <div>
-        <div class="jday-l">Day Two  |  The High-Energy Sangeet</div>
-        <div class="jtitle">The High-Energy Sangeet</div>
-        <div class="jbody">An unforgettable evening of choreographed Bollywood performances, custom lighting setups, live entertainment, and a proper spread. Held across our beachfront venues, a proper celebration for all generations.</div>
-      </div>
-    </div>
-    <div class="jstep">
-      <div class="jdot">3</div>
-      <div>
-        <div class="jday-l">Day Three  |  Wedding Ceremony &amp; Grand Reception</div>
-        <div class="jtitle">Wedding Ceremony &amp; Grand Reception</div>
-        <div class="jbody">A breathtaking beachfront Baraat procession leads directly into sacred vows at a beautiful floral altar. Then dinner, toasts, dancing, and the kind of ending that takes a while to come because no one quite wants to leave.</div>
-      </div>
-    </div>
+  </div>
+  <!-- Mobile dots indicator -->
+  <div class="journey-dots" id="journeyDots">
+    <span class="active" onclick="scrollToDay(0)"></span>
+    <span onclick="scrollToDay(1)"></span>
+    <span onclick="scrollToDay(2)"></span>
   </div>
   <p class="journey-closing">We handle the planning for your multi-day Indian wedding. You take care of being there.</p>
 </section>
@@ -1054,6 +1078,36 @@ function scrollLoc(dir){
   var vp=document.querySelector('.loc-viewport');
   if(vp){vp.scrollBy({left:dir*340,behavior:'smooth'});}
 }
+
+/* Journey Day scroll + dots */
+function scrollToDay(idx){
+  var wrap=document.getElementById('journeyScroll');
+  if(!wrap)return;
+  var steps=wrap.querySelectorAll('.jstep');
+  if(steps[idx]){
+    var stepLeft=steps[idx].offsetLeft - wrap.offsetLeft;
+    wrap.scrollTo({left:stepLeft,behavior:'smooth'});
+  }
+  updateJourneyDot(idx);
+}
+function updateJourneyDot(idx){
+  var dots=document.querySelectorAll('#journeyDots span');
+  dots.forEach(function(d,i){d.classList.toggle('active',i===idx);});
+}
+(function(){
+  var wrap=document.getElementById('journeyScroll');
+  if(!wrap)return;
+  wrap.addEventListener('scroll',function(){
+    var steps=wrap.querySelectorAll('.jstep');
+    var center=wrap.scrollLeft+wrap.clientWidth/2;
+    var closest=0,minDist=Infinity;
+    steps.forEach(function(s,i){
+      var dist=Math.abs(s.offsetLeft+s.offsetWidth/2-wrap.offsetLeft-center);
+      if(dist<minDist){minDist=dist;closest=i;}
+    });
+    updateJourneyDot(closest);
+  },{passive:true});
+})();
 
 function handleHeroSubmit(btn){
   var req=['hFullName','hEmail','hPhone','hGuests'];
