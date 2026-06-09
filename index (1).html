@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Dreams Resorts & Spas × DestinationPick — South Asian Destination Weddings</title>
+<meta name="description" content="Celebrate your South Asian wedding at Dreams Resorts & Spas. Multi-day Mehndi, Haldi, Sangeet, Baraat & oceanfront ceremonies across Los Cabos, Cancún, Puerto Vallarta & Punta Cana. Book a free consultation."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ivory:#FBFCFE;--ivory2:#F1F6FB;--ivory3:#E6EFF7;
+  --night:#0E2438;--night2:#14304A;--night3:#24486A;
+  --gold:#6FA8CE;--gold2:#8FC0DE;--gold3:#BFDCEE;--gold4:#3F7BA6;
+  --ink:#16344E;--ink2:#2C5070;--muted:#5B748C;--soft:#8AA2B8;
+  --bdr:rgba(111,168,206,0.22);--bdr2:rgba(111,168,206,0.45);
+  --g:5rem;--py:5.5rem;
+  --serif:'Cormorant Garamond',Georgia,serif;--sans:'Outfit',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--ivory);color:var(--ink);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.eyebrow{display:inline-flex;align-items:center;gap:0.6rem;font-size:0.7rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold)}
+.divider{display:flex;align-items:center;gap:0.75rem;margin:1.1rem 0}
+.divider::before,.divider::after{content:'';flex:0 0 32px;height:1px;background:var(--gold2)}
+.divider-diamond{width:6px;height:6px;background:var(--gold);transform:rotate(45deg);flex-shrink:0}
+.divider--center{justify-content:center}
+.divider--light::before,.divider--light::after{background:rgba(143,192,222,0.4)}
+.divider--light .divider-diamond{background:rgba(143,192,222,0.6)}
+.nav-wrap{position:fixed;top:0;left:0;right:0;z-index:100;padding:0.75rem clamp(0.75rem,3vw,4rem) 0}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:60px;padding:0.5rem 0.5rem 0.5rem 1.1rem;border-radius:16px;background:rgba(14,36,56,0.34);backdrop-filter:blur(10px) saturate(150%);-webkit-backdrop-filter:blur(10px) saturate(150%);box-shadow:inset 0 1px 1px rgba(255,255,255,0.12),0 8px 30px rgba(0,0,0,0.18),inset 0 0 0 1.4px rgba(255,255,255,0.18);position:relative;overflow:visible}
+.nav::before{display:none}
+.nav::before{content:'';position:absolute;inset:0;border-radius:16px;padding:1.4px;background:linear-gradient(180deg,rgba(255,255,255,0.35),rgba(255,255,255,0.10) 22%,rgba(255,255,255,0) 45%,rgba(255,255,255,0) 58%,rgba(255,255,255,0.10) 80%,rgba(255,255,255,0.35));-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;z-index:0}
+.nav-brand{display:flex;align-items:center;position:relative;z-index:1;flex-shrink:0}
+.nav-logo{height:40px;width:auto;display:block;object-fit:contain}
+.nav-word{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:#fff;line-height:1}
+.nav-links{display:flex;align-items:center;gap:2rem;list-style:none;position:relative;z-index:1}
+.nav-links a{font-size:0.72rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.82);transition:color .2s}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--gold);color:var(--night) !important;padding:0.55rem 1.25rem;font-size:0.68rem !important;letter-spacing:0.12em !important;border-radius:8px;font-weight:600;transition:background .2s !important;white-space:nowrap;flex-shrink:0;line-height:1.4;display:inline-block}
+.nav-cta:hover{background:var(--gold2) !important}
+.hero{position:relative;display:grid;grid-template-columns:55fr 45fr;min-height:100vh;padding-top:68px;background:var(--night);overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}
+.hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(to right,rgba(0,0,0,0.72) 0%,rgba(0,0,0,0.4) 60%,rgba(0,0,0,0.2) 100%)}
+.hero-left{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:4rem var(--g)}
+.hero-eyebrow{font-size:0.72rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold2);margin-bottom:1rem}
+.hero-title{font-family:var(--serif);font-size:clamp(3rem,5vw,5.5rem);font-weight:700;line-height:1.06;color:#FFFFFF;letter-spacing:0.005em;margin-bottom:1rem;text-shadow:0 3px 24px rgba(0,0,0,0.55)}
+.hero-sub{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:rgba(255,255,255,0.85);margin-bottom:1.5rem;max-width:480px}
+.hero-body{font-size:0.95rem;line-height:1.8;color:rgba(255,255,255,0.82);max-width:460px;margin-bottom:2.25rem}
+.hero-body p{margin-bottom:0.9rem}
+.hero-body p:last-child{margin-bottom:0}
+.hero-btns{display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.btn-solid{background:var(--gold);color:var(--night);padding:0.9rem 2.2rem;font-size:0.72rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;border:none;cursor:pointer;display:inline-block;transition:background .2s,transform .2s;border-radius:4px}
+.btn-solid:hover{background:var(--gold2);transform:translateY(-2px)}
+.btn-ghost{font-size:0.72rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.92);border-bottom:1px solid rgba(143,192,222,0.6);padding-bottom:0.15rem;transition:color .2s,border-color .2s}
+.btn-ghost:hover{color:#fff;border-color:var(--gold2)}
+.hero-stats{display:flex;gap:2.5rem;padding-top:2rem;border-top:1px solid rgba(143,192,222,0.3)}
+.hstat-n{display:block;font-family:var(--serif);font-size:2.2rem;font-weight:600;color:#FCFEFF;line-height:1}
+.hstat-l{font-size:0.62rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.6);margin-top:0.3rem}
+.hero-right{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;padding:4rem 3rem 4rem 1rem}
+.hero-form-card{background:rgba(14,36,56,0.92);backdrop-filter:blur(12px);border:1px solid rgba(111,168,206,0.3);border-radius:18px;padding:2.5rem 2rem;width:100%;max-width:400px;position:relative}
+.hero-form-card::before{content:'';position:absolute;top:0;left:2rem;right:2rem;height:3px;background:linear-gradient(90deg,transparent,var(--gold2),transparent);border-radius:2px}
+.hero-form-card h3{font-family:var(--serif);font-size:1.6rem;font-weight:600;color:rgba(255,255,255,0.96);margin-bottom:0.25rem}
+.hero-form-card .form-sub{font-size:0.76rem;color:rgba(255,255,255,0.3);margin-bottom:1.5rem}
+.ticker{background:var(--night2);overflow:hidden;padding:0.88rem 0;border-top:1px solid rgba(111,168,206,0.12);border-bottom:1px solid rgba(111,168,206,0.12)}
+.ticker-track{display:flex;white-space:nowrap;animation:scroll 32s linear infinite}
+.ti{flex-shrink:0;font-size:0.64rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:#ffffff;padding:0 1.5rem}
+.td{color:rgba(255,255,255,0.5);padding:0 0.4rem}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.trust-sec{background:var(--night2);position:relative;overflow:hidden;padding:var(--py) var(--g)}
+.trust-sec::before{content:'';position:absolute;top:0;left:var(--g);right:var(--g);height:2px;background:linear-gradient(90deg,transparent,var(--gold2),transparent)}
+.trust-sec::after{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,0.015) 0,rgba(255,255,255,0.015) 1px,transparent 1px,transparent 32px);pointer-events:none}
+.publications{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 2.5rem;margin:1.8rem 0;position:relative;z-index:1}
+.pub-item{font-family:var(--serif);font-size:1.25rem;font-style:italic;font-weight:500;color:rgba(255,255,255,0.35);letter-spacing:0.04em;transition:color .2s}
+.pub-item:hover{color:rgba(255,255,255,0.7)}
+.metrics{background-color:rgba(255,255,255,0.06);display:grid;grid-template-columns:repeat(4,1fr);gap:1px;position:relative;z-index:1;margin-top:2rem}
+.metric{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2.5rem 2rem;background-color:rgba(20,48,74,0.8)}
+.metric-n{display:block;font-family:var(--serif);font-size:2.8rem;font-weight:600;color:var(--gold2);line-height:1}
+.metric-l{display:block;font-size:0.65rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-top:0.55rem}
+.metric-label-only{display:block;font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--gold2);line-height:1.25;margin-bottom:0.35rem}
+.credentials{display:flex;justify-content:center;gap:2rem;margin-top:1.8rem;font-size:0.72rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:rgba(255,255,255,0.35);position:relative;z-index:1}
+.credentials span{display:flex;align-items:center;gap:0.5rem}
+.sec{padding:var(--py) var(--g)}
+.sec-ivory{background:var(--ivory)}.sec-ivory2{background:var(--ivory2)}.sec-ivory3{background:var(--ivory3)}
+.sec-dark{background:var(--night2);position:relative;overflow:hidden}
+.sec-dark::before{content:'';position:absolute;top:0;left:var(--g);right:var(--g);height:2px;background:linear-gradient(90deg,transparent,var(--gold2),transparent)}
+.sec-dark::after{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(255,255,255,0.015) 0,rgba(255,255,255,0.015) 1px,transparent 1px,transparent 32px);pointer-events:none}
+.sec-hd{margin-bottom:3rem}
+.sec-hd-c{text-align:center}
+.sec-hd-c .divider{justify-content:center}
+.sec-hd-c .body{margin:0 auto}
+.sec-title{font-family:var(--serif);font-size:clamp(2rem,3.2vw,3.2rem);font-weight:600;line-height:1.12;color:var(--ink);margin-top:0.4rem}
+.sec-title em{font-style:italic;color:var(--gold4);font-weight:500}
+.sec-title.lt{color:rgba(255,255,255,0.95)}
+.sec-title.lt em{color:var(--gold2)}
+.body{font-size:0.95rem;line-height:1.8;color:var(--muted);max-width:520px}
+.body.lt{color:rgba(255,255,255,0.48)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.about-imgs{position:relative;height:520px;overflow:hidden;border-radius:14px;box-shadow:12px 16px 48px rgba(14,36,56,0.18)}
+.ab-main{position:absolute;inset:0;width:100%;height:100%;overflow:hidden}
+.ab-main img{width:100%;height:100%;object-fit:cover}
+.ab-pill{position:absolute;left:0;top:30%;background:var(--ivory);border-left:3px solid var(--gold);padding:1rem 1.25rem;text-align:center;z-index:5;min-width:130px;border-radius:0 10px 10px 0;box-shadow:4px 6px 20px rgba(14,36,56,0.12)}
+.ab-pill-n{display:block;font-family:var(--serif);font-size:2rem;font-weight:600;color:var(--gold4);line-height:1}
+.ab-pill-t{display:block;font-size:0.6rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--soft);margin-top:0.25rem}
+.dest-offers{margin-top:1.8rem;display:grid;gap:0}
+.dopt{display:grid;grid-template-columns:auto 1fr;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--bdr);align-items:start}
+.dopt:first-child{border-top:1px solid var(--bdr)}
+.dopt h4{font-family:var(--serif);font-size:1.08rem;font-weight:600;color:var(--ink);margin-bottom:0.15rem}
+.dopt p{font-size:0.85rem;color:var(--muted);line-height:1.6}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 4rem;margin-top:2.5rem}
+.why-item{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;padding:1.6rem 0;border-bottom:1px solid var(--bdr);align-items:start}
+.why-item h4{font-family:var(--serif);font-size:1.18rem;font-weight:600;color:var(--ink);margin-bottom:0.25rem}
+.why-item p{font-size:0.87rem;color:var(--muted);line-height:1.65}
+.why-intro{font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--gold4);margin-top:0.6rem;margin-bottom:0.3rem}
+.resorts-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.8rem;margin-top:2.75rem}
+.resort-card{border-radius:16px;overflow:hidden;background:var(--ivory);box-shadow:0 8px 32px rgba(14,36,56,0.1);transition:transform .3s,box-shadow .3s}
+.resort-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(14,36,56,0.16)}
+.rc-img{position:relative;height:240px;overflow:hidden}
+.rc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.resort-card:hover .rc-img img{transform:scale(1.05)}
+.rc-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(14,36,56,0.7) 0%,rgba(14,36,56,0) 50%)}
+.rc-loc{position:absolute;bottom:1rem;left:1.2rem;z-index:2;font-size:0.65rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.85)}
+.rc-body{padding:1.75rem}
+.rc-name{font-family:var(--serif);font-size:1.35rem;font-weight:600;color:var(--ink);margin-bottom:0.5rem;line-height:1.2}
+.rc-desc{font-size:0.87rem;color:var(--muted);line-height:1.65;margin-bottom:1rem}
+.rc-tags{display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.1rem}
+.rc-tag{font-size:0.64rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold4);background:var(--ivory3);border:1px solid var(--bdr2);padding:0.28rem 0.65rem;border-radius:100px}
+.rc-highlights{list-style:none;display:grid;gap:0.4rem}
+.rc-highlights li{font-size:0.83rem;color:var(--muted);line-height:1.5;display:flex;align-items:flex-start;gap:0.6rem}
+.rc-highlights li::before{content:'◆';color:var(--gold2);font-size:0.45rem;flex-shrink:0;margin-top:0.4rem}
+.resorts-highlights-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:2.5rem;background:var(--bdr)}
+.rhb-item{background:var(--ivory2);padding:1.5rem;text-align:center}
+.rhb-val{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--gold4)}
+.rhb-lbl{font-size:0.65rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-top:0.3rem}
+.packages-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-top:2.75rem}
+.pkg-card{border-radius:18px;overflow:hidden;position:relative}
+.pkg-card.pkg-dark{background:var(--night);color:#fff}
+.pkg-card.pkg-light{background:var(--ivory);border:1px solid var(--bdr2);box-shadow:0 8px 32px rgba(14,36,56,0.08)}
+.pkg-header{padding:2.5rem 2.5rem 1.5rem}
+.pkg-header::before{content:'';display:block;width:100%;height:3px;background:linear-gradient(90deg,transparent,var(--gold2),transparent);margin-bottom:2rem;border-radius:2px}
+.pkg-eyebrow{font-size:0.65rem;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold2);margin-bottom:0.5rem}
+.pkg-name{font-family:var(--serif);font-size:1.8rem;font-weight:600;line-height:1.1;margin-bottom:0.5rem}
+.pkg-card.pkg-dark .pkg-name{color:#fff}
+.pkg-card.pkg-light .pkg-name{color:var(--ink)}
+.pkg-desc{font-size:0.88rem;line-height:1.7}
+.pkg-card.pkg-dark .pkg-desc{color:rgba(255,255,255,0.5)}
+.pkg-card.pkg-light .pkg-desc{color:var(--muted)}
+.pkg-body{padding:0 2.5rem 2.5rem}
+.pkg-includes-title{font-size:0.62rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;margin-bottom:1rem}
+.pkg-card.pkg-dark .pkg-includes-title{color:var(--gold2)}
+.pkg-card.pkg-light .pkg-includes-title{color:var(--gold4)}
+.pkg-list{list-style:none;display:grid;gap:0.6rem;margin-bottom:1.5rem}
+.pkg-list li{font-size:0.87rem;line-height:1.5;display:flex;align-items:flex-start;gap:0.75rem}
+.pkg-list li::before{content:'✦';font-size:0.5rem;flex-shrink:0;margin-top:0.35rem}
+.pkg-card.pkg-dark .pkg-list li{color:rgba(255,255,255,0.75)}
+.pkg-card.pkg-dark .pkg-list li::before{color:var(--gold2)}
+.pkg-card.pkg-light .pkg-list li{color:var(--ink2)}
+.pkg-card.pkg-light .pkg-list li::before{color:var(--gold4)}
+.pkg-closing{font-family:var(--serif);font-style:italic;font-size:0.95rem}
+.pkg-card.pkg-dark .pkg-closing{color:rgba(255,255,255,0.4)}
+.pkg-card.pkg-light .pkg-closing{color:var(--muted)}
+.dp-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 4rem;margin-top:2.5rem}
+.dp-item{display:grid;grid-template-columns:auto 1fr;gap:1.2rem;padding:1.5rem 0;border-bottom:1px solid var(--bdr);align-items:start}
+.dp-item h4{font-family:var(--serif);font-size:1.15rem;font-weight:600;color:var(--ink);margin-bottom:0.25rem}
+.dp-item p{font-size:0.87rem;color:var(--muted);line-height:1.65}
+.form-layout{display:grid;grid-template-columns:1fr 1.1fr;gap:5rem;align-items:start}
+.chk{margin-top:1.75rem}
+.ci{display:flex;align-items:flex-start;gap:0.9rem;margin-bottom:0.85rem}
+.ci-mark{width:20px;height:20px;flex-shrink:0;border-radius:50%;background:var(--gold);color:#fff;display:flex;align-items:center;justify-content:center;font-size:0.6rem;margin-top:0.1rem}
+.ci span{font-size:0.9rem;color:var(--ink2);line-height:1.6}
+.form-card{background:var(--night);padding:2.75rem;position:relative;border-radius:18px}
+.form-card::before{content:'';position:absolute;top:0;left:2rem;right:2rem;height:3px;background:linear-gradient(90deg,transparent,var(--gold2),transparent)}
+.form-card h3{font-family:var(--serif);font-size:1.8rem;font-weight:600;color:rgba(255,255,255,0.96);margin-bottom:0.3rem}
+.form-sub{font-size:0.8rem;color:rgba(255,255,255,0.32);margin-bottom:1.75rem}
+.fg{margin-bottom:1rem}
+.fg label{display:block;font-size:0.63rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold2);opacity:0.7;margin-bottom:0.4rem}
+.fg input,.fg select,.fg textarea{width:100%;background:rgba(255,255,255,0.06);border:1px solid rgba(111,168,206,0.22);border-radius:8px;color:rgba(255,255,255,0.88);padding:0.72rem 0.7rem;font-size:0.9rem;font-family:var(--sans);outline:none;transition:border-color .2s,background .2s;-webkit-appearance:none;appearance:none}
+.fg input:focus,.fg select:focus{border-color:var(--gold2);background:rgba(255,255,255,0.09)}
+.fg input::placeholder{color:rgba(255,255,255,0.22)}
+.fg select option{background:#0E2438;color:rgba(255,255,255,0.85)}
+.form-btn{width:100%;background:var(--gold);color:var(--night);padding:1rem;border-radius:100px;font-size:0.72rem;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);margin-top:0.5rem;transition:background .2s,transform .2s}
+.form-btn:hover{background:var(--gold2);transform:translateY(-2px)}
+.form-note{text-align:center;font-size:0.66rem;color:rgba(255,255,255,0.2);margin-top:0.75rem}
+.footer{background:var(--night);border-top:1px solid rgba(111,168,206,0.14);padding:2.5rem var(--g)}
+.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+.footer-brand{font-family:var(--serif);font-size:1rem;font-weight:500;color:rgba(255,255,255,0.4)}
+.footer-copy{font-size:0.64rem;color:rgba(255,255,255,0.18);text-align:right}
+.loc-pin{background:var(--ivory);position:relative}
+.loc-sticky{height:100vh;display:flex;flex-direction:column;overflow:hidden;padding:calc(var(--py)*0.55) 0 1.6rem}
+.loc-head{display:flex;align-items:flex-end;justify-content:space-between;gap:2rem;padding:0 var(--g) 1.5rem;flex-shrink:0}
+.loc-hint{display:flex;align-items:center;gap:0.7rem;font-size:0.66rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--soft);white-space:nowrap;padding-bottom:0.4rem}
+.loc-hint svg{color:var(--gold4)}
+.loc-viewport{flex:1;display:flex;align-items:center;overflow:hidden;min-height:0;position:relative}
+.loc-track{display:flex;gap:1.4rem;padding:0 var(--g);will-change:transform}
+.loc-arrows{display:flex;gap:0.75rem;align-items:center;padding-bottom:0.4rem}
+.loc-arr{width:36px;height:36px;border-radius:50%;border:1.5px solid var(--gold2);background:var(--ivory);color:var(--gold4);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .2s,color .2s;font-size:1rem}
+.loc-arr:hover{background:var(--gold4);color:#fff;border-color:var(--gold4)}
+.loc-card{position:relative;border-radius:16px;overflow:hidden;min-height:340px;display:flex;align-items:flex-end;box-shadow:0 10px 34px rgba(14,36,56,0.12)}
+.loc-track .loc-card{flex:0 0 clamp(290px,38vw,520px);height:min(62vh,560px);min-height:0;margin:0}
+.loc-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.loc-card:hover img{transform:scale(1.06)}
+.loc-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(8,22,36,0.9) 0%,rgba(8,22,36,0.45) 42%,rgba(8,22,36,0.05) 75%)}
+.loc-body{position:relative;z-index:2;padding:1.6rem 1.5rem;width:100%;color:#fff}
+.loc-cap{display:inline-block;font-size:0.6rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--night);background:var(--gold2);padding:0.32rem 0.7rem;border-radius:100px;margin-bottom:0.8rem}
+.loc-name{font-family:var(--serif);font-size:1.55rem;font-weight:600;line-height:1.1;margin-bottom:0.35rem}
+.loc-tag{font-size:0.82rem;color:rgba(255,255,255,0.78);line-height:1.5;margin-bottom:0.9rem}
+.loc-stats{display:flex;flex-wrap:wrap;gap:0.4rem 1rem;padding-top:0.85rem;border-top:1px solid rgba(255,255,255,0.18)}
+.loc-stat{font-size:0.72rem;color:rgba(255,255,255,0.85)}
+.loc-stat b{font-family:var(--serif);font-size:0.95rem;font-weight:600;color:#fff;margin-right:0.25rem}
+.loc-cta{flex:0 0 clamp(290px,30vw,400px)!important;background:var(--night)!important}
+.loc-cta::after{display:none}
+.loc-cta-inner{position:relative;z-index:2;padding:2.6rem 2.2rem}
+.loc-cta-title{font-family:var(--serif);font-size:1.7rem;font-weight:600;color:#fff;line-height:1.15;margin:1rem 0 0.7rem}
+.loc-cta-body{font-size:0.9rem;line-height:1.7;color:rgba(255,255,255,0.55)}
+.loc-progress{flex-shrink:0;height:3px;background:var(--bdr);margin:1.5rem var(--g) 0;border-radius:2px;overflow:hidden}
+.loc-progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--gold4),var(--gold2));border-radius:2px}
+.venue-cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin-top:3rem}
+.vc{border-radius:16px;overflow:hidden;background:var(--ivory);box-shadow:0 6px 28px rgba(14,36,56,0.08);transition:transform .3s,box-shadow .3s}
+.vc:hover{transform:translateY(-4px);box-shadow:0 14px 44px rgba(14,36,56,0.14)}
+.vc-img{position:relative;height:220px;overflow:hidden}
+.vc-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.vc:hover .vc-img img{transform:scale(1.05)}
+.vc-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(14,36,56,0.55) 0%,rgba(14,36,56,0) 55%)}
+.vc-badge{position:absolute;bottom:1rem;left:1.1rem;z-index:2;font-size:0.6rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--night);background:var(--gold2);padding:0.3rem 0.7rem;border-radius:100px}
+.vc-body{padding:1.5rem 1.6rem 1.75rem}
+.vc-name{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--ink);margin-bottom:0.5rem;line-height:1.2}
+.vc-desc{font-size:0.85rem;color:var(--muted);line-height:1.65;margin-bottom:1.2rem}
+.vc-caps{display:flex;flex-wrap:wrap;gap:0.5rem 1.5rem;border-top:1px solid var(--bdr);padding-top:1rem}
+.vc-cap-item{display:flex;flex-direction:column;gap:0.15rem}
+.vc-cap-label{font-size:0.6rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--soft)}
+.vc-cap-val{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--gold4)}
+.venue-cards-grid .vc:last-child:nth-child(3n+1){grid-column:2}
+.tgrid{display:flex;gap:1.5rem;margin-top:2.75rem;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:1rem;-webkit-overflow-scrolling:touch;justify-content:center;flex-wrap:wrap}
+.tcard{background:var(--ivory);border-radius:16px;padding:2.25rem 2rem;position:relative;box-shadow:0 8px 30px rgba(14,36,56,0.06);transition:transform .2s,box-shadow .2s;flex:0 0 340px;max-width:360px;scroll-snap-align:start}
+.tcard:hover{transform:translateY(-3px);box-shadow:0 14px 40px rgba(14,36,56,0.1)}
+.tc-text{font-family:var(--serif);font-size:1.05rem;font-style:italic;color:var(--night2);line-height:1.7;margin-bottom:1.4rem}
+.tc-foot{display:flex;align-items:center;gap:0.85rem;padding-top:1.1rem;border-top:1px solid var(--bdr)}
+.tc-avatar{width:46px;height:46px;border-radius:50%;flex-shrink:0;border:2px solid var(--gold3);display:flex;align-items:center;justify-content:center;background:var(--gold);color:var(--night);font-family:var(--serif);font-size:1.1rem;font-weight:600}
+.tc-name{font-size:0.88rem;font-weight:600;color:var(--ink)}
+.tc-det{font-size:0.74rem;color:var(--soft);margin-top:0.2rem}
+/* ── CARD SCROLL WRAPPER ── */
+.card-sec-inner{overflow-x:auto;overflow-y:visible;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-top:12px;padding-bottom:16px}
+.card-sec-inner::-webkit-scrollbar{display:none}
+@media(max-width:768px){
+  .card-sec-inner{padding-left:1.25rem;padding-right:0;scroll-snap-type:x mandatory}
+  /* S7 Resort Cards */
+  .card-sec-inner .resorts-grid{display:flex;flex-direction:row;gap:0.85rem;align-items:center;padding-right:1.25rem}
+  .card-sec-inner .resort-card{width:76vw;flex-shrink:0;scroll-snap-align:center;transition:transform .3s ease,opacity .3s ease,box-shadow .3s ease;transform:scale(0.92);opacity:0.72}
+  .card-sec-inner .resort-card.is-active{transform:scale(1);opacity:1;box-shadow:0 12px 36px rgba(0,0,0,0.18)}
+  /* S8 Venue Cards */
+  .card-sec-inner-2{overflow-x:auto;overflow-y:visible;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-top:12px;padding-bottom:16px;padding-left:1.25rem;padding-right:0;scroll-snap-type:x mandatory}
+  .card-sec-inner-2::-webkit-scrollbar{display:none}
+  .card-sec-inner-2 .venue-cards-grid{display:flex;flex-direction:row;gap:0.85rem;align-items:center;padding-right:1.25rem;grid-template-columns:unset}
+  .card-sec-inner-2 .vc{width:76vw;flex-shrink:0;scroll-snap-align:center;transition:transform .3s ease,opacity .3s ease,box-shadow .3s ease;transform:scale(0.92);opacity:0.72}
+  .card-sec-inner-2 .vc.is-active{transform:scale(1);opacity:1;box-shadow:0 12px 36px rgba(0,0,0,0.18)}
+  /* S10 Why DP */
+  .card-sec-inner-3{overflow-x:auto;overflow-y:visible;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-top:12px;padding-bottom:16px;padding-left:1.25rem;padding-right:0;scroll-snap-type:x mandatory}
+  .card-sec-inner-3::-webkit-scrollbar{display:none}
+  .card-sec-inner-3 .dp-grid{display:flex;flex-direction:row;gap:0.85rem;align-items:stretch;padding-right:1.25rem;grid-template-columns:unset}
+  .card-sec-inner-3 .dp-item{width:72vw;flex-shrink:0;scroll-snap-align:center;background:var(--ivory);border-radius:12px;padding:1.25rem;border:1px solid var(--bdr2);transition:transform .3s ease,opacity .3s ease,box-shadow .3s ease;transform:scale(0.92);opacity:0.72}
+  .card-sec-inner-3 .dp-item.is-active{transform:scale(1);opacity:1;box-shadow:0 12px 36px rgba(0,0,0,0.12)}
+  /* S13 Testimonials */
+  .card-sec-inner-4{overflow-x:auto;overflow-y:visible;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-top:12px;padding-bottom:16px;padding-left:1.25rem;padding-right:0;scroll-snap-type:x mandatory}
+  .card-sec-inner-4::-webkit-scrollbar{display:none}
+  .card-sec-inner-4 .tgrid{display:flex;flex-direction:row;gap:0.85rem;align-items:center;padding-right:1.25rem;flex-wrap:nowrap;justify-content:flex-start}
+  .card-sec-inner-4 .tcard{width:76vw;flex-shrink:0;scroll-snap-align:center;transition:transform .3s ease,opacity .3s ease,box-shadow .3s ease;transform:scale(0.92);opacity:0.72}
+  .card-sec-inner-4 .tcard.is-active{transform:scale(1);opacity:1;box-shadow:0 12px 36px rgba(0,0,0,0.18)}
+}
+@media(max-width:1080px){
+  :root{--g:1.6rem;--py:4rem}
+  .nav{padding:0.4rem 0.4rem 0.4rem 1rem}.nav-logo{height:36px}.nav-links{display:none}
+  .nav-cta{font-size:0 !important;padding:0.45rem 0.85rem}
+  .nav-cta::after{content:'Consult Free';font-size:0.62rem;letter-spacing:0.08em;font-weight:600}
+  .hero{grid-template-columns:1fr}.hero-left{padding:5rem 1.6rem 3rem}.hero-right{padding:2rem 1.6rem 4rem}
+  .hero-form-card{max-width:100%}
+  .hero-scrim{background:rgba(0,0,0,0.62)}
+  .about-grid,.form-layout{grid-template-columns:1fr;gap:3rem}
+  .about-imgs{height:280px}
+  .why-grid,.dp-grid{grid-template-columns:1fr;gap:0}
+  .resorts-grid{grid-template-columns:1fr;gap:1.4rem}
+  .resorts-highlights-bar{grid-template-columns:repeat(2,1fr)}
+  .packages-grid{grid-template-columns:1fr;gap:1.5rem}
+  .metrics{grid-template-columns:repeat(2,1fr);gap:1px}
+  .metric{padding:1.5rem 1rem}
+  .tgrid{gap:1rem}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+  .footer-copy{text-align:left}
+  .sec-dark::before{left:1.6rem;right:1.6rem}
+  .loc-sticky{height:auto;overflow:visible;padding:var(--py) 0 0}
+  .loc-head{flex-direction:column;align-items:flex-start;gap:0.4rem;padding:0 var(--g) 1.4rem}
+  .loc-viewport{overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;scroll-behavior:smooth}
+  .loc-track{transform:none!important;gap:1rem;padding:0 var(--g) 0.5rem}
+  .loc-track .loc-card{flex:0 0 80%;height:380px;scroll-snap-align:center}
+  .loc-cta{flex:0 0 80%!important}
+  .loc-cta-inner{display:flex;flex-direction:column;justify-content:center;height:100%}
+  .loc-progress{display:none}
+  .venue-cards-grid{grid-template-columns:1fr 1fr;gap:1.2rem}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav-wrap">
+  <nav class="nav">
+    <a href="#hero" class="nav-brand" aria-label="Dreams Resorts & Spas × DestinationPick — home">
+      <img src="https://www.destinationpick.com/images/logo.webp" alt="Dreams Resorts & Spas × DestinationPick" class="nav-logo" onerror="this.outerHTML='<span class=\'nav-word\'>Dreams Resorts × DestinationPick</span>'"/>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#destination">Discover Destination</a></li>
+      <li><a href="#services">Wedding Celebrations</a></li>
+      <li><a href="#locations">Curated Experiences</a></li>
+      <li><a href="#testimonials">Real Stories</a></li>
+      <li><a href="#consult">Personalized Itineraries</a></li>
+    </ul>
+    <a href="#consult" class="nav-cta">Schedule a Free Consultation</a>
+  </nav>
+</div>
+
+<!-- HERO — FIX 1: All 3 body paragraphs present per content doc -->
+<div class="hero" id="hero">
+  <img class="hero-bg" src="images/ChristianWedding.jpg.jpg" alt="Dreams Resorts hero banner — South Asian destination wedding"/>
+  <div class="hero-scrim"></div>
+  <div class="hero-left">
+    <div class="hero-eyebrow">A Grand South Asian Destination Wedding Experience</div>
+    <h1 class="hero-title">Celebrate Your<br/>Forever in Paradise</h1>
+    <p class="hero-sub">A Destination Designed for Grand South Asian Weddings and Multi-Day Celebrations.</p>
+    <div class="hero-body">
+      <p>You already know how much these traditions mean to your family. The tradition that has been carried across generations and oceans. It's not just for celebration, it's about family and memories.</p>
+      <p>There's something special about letting each moment breathe. A Mehndi night that doesn't have to end early. A Sangeet that turns into an all-night dance floor. A wedding ceremony by the ocean that feels calm, not rushed.</p>
+      <p>In the Caribbean, that's exactly how it unfolds. Over days, not hours. With space for every ritual, every emotion, and every celebration.</p>
+    </div>
+    <div class="hero-btns">
+      <a href="#consult" class="btn-solid">Book a Free Consultation &rarr;</a>
+      <a href="#destinations" class="btn-ghost">SEE WHAT YOUR LOS CABOS WEDDING COULD LOOK LIKE</a>
+    </div>
+    <div class="hero-stats">
+      <div><span class="hstat-n">500+</span><div class="hstat-l">Real Weddings Delivered</div></div>
+      <div><span class="hstat-n">30+</span><div class="hstat-l">Years of Experience</div></div>
+      <div><span class="hstat-n">20,000+</span><div class="hstat-l">Guests Hosted Globally</div></div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="hero-form-card">
+      <h3>Request a Personalised Wedding Proposal</h3>
+      <p class="form-sub">Response within 24 hours</p>
+      <div class="fg"><label>Your Name *</label><input type="text" placeholder="Full name" id="hFullName"/></div>
+      <div class="fg"><label>Email Address *</label><input type="email" placeholder="you@email.com" id="hEmail"/></div>
+      <div class="fg"><label>Phone / WhatsApp *</label><input type="tel" placeholder="+1 (___) ___-____" id="hPhone"/></div>
+      <div class="fg"><label>Wedding Date</label><input type="date" style="color-scheme:dark" id="hDate"/></div>
+      <div class="fg">
+        <label>Estimated Guest Count *</label>
+        <select id="hGuests">
+          <option value="">Select</option>
+          <option>Under 50</option>
+          <option>50 – 100</option>
+          <option>100 – 200</option>
+          <option>200 – 350</option>
+          <option>350 – 500</option>
+          <option>500+</option>
+        </select>
+      </div>
+      <div class="fg">
+        <label>Preferred Destination</label>
+        <select id="hDest">
+          <option value="">Select</option>
+          <option>Los Cabos</option>
+          <option>Cancún</option>
+          <option>Puerto Vallarta</option>
+          <option>Punta Cana</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <button class="form-btn" onclick="handleHeroSubmit(this)">Request a Personalised Wedding Proposal</button>
+      <p class="form-note">Your details remain private. A dedicated specialist will respond within 24 hours, no spam, no obligation.</p>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST — FIX 2: 4th metric corrected to label-only, no fake number -->
+<section class="trust-sec" id="trust">
+  <div style="text-align:center;position:relative;z-index:1;margin-bottom:1.5rem">
+    <div class="eyebrow" style="color:var(--gold2);justify-content:center">TRUSTED BY THE WORLD'S LEADING WEDDING &amp; LUXURY MEDIA</div>
+  </div>
+  <div class="publications">
+    <span class="pub-item">Vogue</span>
+    <span class="pub-item">Condé Nast Traveler</span>
+    <span class="pub-item">BRIDES</span>
+    <span class="pub-item">WedLuxe</span>
+    <span class="pub-item">Maharani Weddings</span>
+  </div>
+  <div class="metrics">
+    <div class="metric"><span class="metric-n">500+</span><span class="metric-l">Real Weddings Delivered</span></div>
+    <div class="metric"><span class="metric-n">30+</span><span class="metric-l">Years of Experience</span></div>
+    <div class="metric"><span class="metric-n">20,000+</span><span class="metric-l">Guests Hosted Globally</span></div>
+    <div class="metric">
+      <span class="metric-label-only">South Asian<br/>Wedding Specialists</span>
+      <span class="metric-l">Specialists in South Asian Destination Weddings</span>
+    </div>
+  </div>
+  <div class="credentials">
+    <span>Fully IATAN Certified</span>
+    <span>TICO Certified</span>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span class="ti">MEHNDI</span><span class="td"> </span>
+    <span class="ti">HALDI</span><span class="td"> </span>
+    <span class="ti">SANGEET</span><span class="td"> </span>
+    <span class="ti">GRAND BARAAT</span><span class="td"> </span>
+    <span class="ti">OCEANFRONT VOWS</span><span class="td"> </span>
+    <span class="ti">SUNSET RECEPTION</span><span class="td"> </span>
+    <span class="ti">SOUTH ASIAN CUISINE</span><span class="td"> </span>
+    <span class="ti">BEACHFRONT CELEBRATIONS</span><span class="td"> </span>
+    <span class="ti">MEHNDI</span><span class="td"> </span>
+    <span class="ti">HALDI</span><span class="td"> </span>
+    <span class="ti">SANGEET</span><span class="td"> </span>
+    <span class="ti">GRAND BARAAT</span><span class="td"> </span>
+    <span class="ti">OCEANFRONT VOWS</span><span class="td"> </span>
+    <span class="ti">SUNSET RECEPTION</span><span class="td"> </span>
+    <span class="ti">SOUTH ASIAN CUISINE</span><span class="td"> </span>
+    <span class="ti">BEACHFRONT CELEBRATIONS</span><span class="td"> </span>
+  </div>
+</div>
+
+<!-- DESTINATION VALUE -->
+<section class="sec sec-ivory" id="destination">
+  <div class="about-grid">
+    <div class="about-imgs">
+      <div class="ab-main"><img loading="lazy" src="images/banner.jpg.jpg" alt="Caribbean coast — destination wedding setting"/></div>
+      <div class="ab-pill"><span class="ab-pill-n">Caribbean</span><span class="ab-pill-t">The Jewel of the Caribbean</span></div>
+    </div>
+    <div>
+      <div class="eyebrow">THE JEWEL OF THE CARIBBEAN</div>
+      <div class="divider"><div class="divider-diamond"></div></div>
+      <h2 class="sec-title">A Destination Made for<br/><em>Grand South Asian Celebrations</em></h2>
+      <p class="body" style="margin-top:1rem">A paradise for multi-day wedding celebrations, offering spectacular oceanfront venues, luxurious accommodations, and memorable experiences for every guest.</p>
+      <div class="dest-offers">
+        <div class="dopt"><div><h4>Iconic Coastal Backdrops</h4><p>Pristine beachfront landscapes designed for elevated ceremonies and celebrations.</p></div></div>
+        <div class="dopt"><div><h4>All-Inclusive Excellence</h4><p>Luxury resorts offering seamless execution and world-class hospitality.</p></div></div>
+        <div class="dopt"><div><h4>Authentic Caribbean Warmth</h4><p>A destination known for gracious service and unforgettable guest experiences.</p></div></div>
+        <div class="dopt"><div><h4>Easy International Travel</h4><p>Quick, direct flights from major North American cities.</p></div></div>
+        <div class="dopt"><div><h4>Sun-Perfect Climate</h4><p>Year-round tropical warmth ideal for destination weddings and outdoor events.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY DREAMS -->
+<section class="sec sec-ivory2" id="why-dreams">
+  <div class="sec-hd sec-hd-c">
+    <div class="eyebrow">Why Dreams Resorts &amp; Spas?</div>
+    <div class="divider divider--center"><div class="divider-diamond"></div></div>
+    <h2 class="sec-title">The big moments and the small details,<br/><em>all taken care of.</em></h2>
+    <p class="why-intro">Part of the Hyatt Inclusive Collection — the world standard for luxury all-inclusive hospitality.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-item"><div><h4>Hyatt Inclusive Collection</h4><p>Global luxury hospitality brand with world-class service standards across every property.</p></div></div>
+    <div class="why-item"><div><h4>South Asian Wedding Friendly</h4><p>Properties equipped and experienced for multi-day Indian and South Asian celebrations.</p></div></div>
+    <div class="why-item"><div><h4>Dedicated Wedding Coordinators</h4><p>An on-property team devoted entirely to your wedding experience.</p></div></div>
+    <div class="why-item"><div><h4>Group Accommodation</h4><p>Luxury room blocks managed for groups across every property.</p></div></div>
+    <div class="why-item"><div><h4>Multiple Venue Options</h4><p>From intimate beachfront gazebos to grand ballrooms accommodating up to 700 guests.</p></div></div>
+  </div>
+</section>
+
+<!-- RESORT CARDS -->
+<section class="sec sec-ivory3" id="destinations">
+  <div class="sec-hd sec-hd-c">
+    <div class="eyebrow">Our Signature Wedding Resorts</div>
+    <div class="divider divider--center"><div class="divider-diamond"></div></div>
+    <h2 class="sec-title">Four signature resorts, each tailored to<br/><em>a unique wedding experience.</em></h2>
+  </div>
+  <div class="card-sec-inner">
+  <div class="resorts-grid">
+    <div class="resort-card">
+      <div class="rc-img"><img loading="lazy" src="images/banner.jpg.jpg" alt="Dreams Los Cabos Suites Golf Resort & Spa"/><span class="rc-loc">Los Cabos, Mexico</span></div>
+      <div class="rc-body">
+        <div class="rc-name">Dreams Los Cabos Suites Golf Resort &amp; Spa</div>
+        <p class="rc-desc">The premier destination for luxury South Asian weddings in Los Cabos, where dramatic coastlines, oceanfront venues, and elevated hospitality create unforgettable celebrations.</p>
+        <div class="rc-tags"><span class="rc-tag">Luxury beach weddings</span><span class="rc-tag">Premium Indian weddings</span><span class="rc-tag">Cabo destination weddings</span><span class="rc-tag">Oceanfront celebrations</span></div>
+        <ul class="rc-highlights"><li>Stunning oceanfront ceremony locations</li><li>Spectacular Sea of Cortez backdrops</li><li>Multi-day South Asian wedding experiences</li><li>Luxury resort amenities and accommodations</li></ul>
+      </div>
+    </div>
+    <div class="resort-card">
+      <div class="rc-img"><img loading="lazy" src="images/DSC02338.jpg" alt="Dreams Riviera Cancun Resort & Spa"/><span class="rc-loc">Cancún, Mexico</span></div>
+      <div class="rc-body">
+        <div class="rc-name">Dreams Riviera Cancun Resort &amp; Spa</div>
+        <p class="rc-desc">A vibrant Caribbean beachfront resort designed for wedding weekends filled with celebration, connection, and unforgettable guest experiences.</p>
+        <div class="rc-tags"><span class="rc-tag">Cancún weddings</span><span class="rc-tag">Beachfront ceremonies</span><span class="rc-tag">Multi-day celebrations</span><span class="rc-tag">Caribbean weddings</span></div>
+        <ul class="rc-highlights"><li>White-sand beachfront venues</li><li>Multiple event spaces for wedding weekends</li><li>Ideal for Mehndi, Sangeet, and receptions</li><li>Exceptional hospitality throughout the stay</li></ul>
+      </div>
+    </div>
+    <div class="resort-card">
+      <div class="rc-img"><img loading="lazy" src="images/DSC03222-Editar.jpg" alt="Dreams Vallarta Bay Resort & Spa"/><span class="rc-loc">Puerto Vallarta, Mexico</span></div>
+      <div class="rc-body">
+        <div class="rc-name">Dreams Vallarta Bay Resort &amp; Spa</div>
+        <p class="rc-desc">An intimate Pacific Coast retreat where boutique luxury, ocean views, and romantic settings create effortlessly elegant destination weddings.</p>
+        <div class="rc-tags"><span class="rc-tag">West Coast Mexico weddings</span><span class="rc-tag">Ocean-view celebrations</span><span class="rc-tag">Boutique luxury</span><span class="rc-tag">Intimate gatherings</span></div>
+        <ul class="rc-highlights"><li>Panoramic ocean-view venues</li><li>Romantic sunset celebrations</li><li>Sophisticated boutique atmosphere</li><li>Ideal for intimate destination weddings</li></ul>
+      </div>
+    </div>
+    <div class="resort-card">
+      <div class="rc-img"><img loading="lazy" src="images/CAS03643.jpg" alt="Dreams Royal Beach Punta Cana"/><span class="rc-loc">Punta Cana, Dominican Republic</span></div>
+      <div class="rc-body">
+        <div class="rc-name">Dreams Royal Beach Punta Cana</div>
+        <p class="rc-desc">A tropical beachfront destination built for grand wedding weekends, expansive guest lists, and celebrations that unfold on a spectacular scale.</p>
+        <div class="rc-tags"><span class="rc-tag">Dominican Republic weddings</span><span class="rc-tag">Large guest counts</span><span class="rc-tag">Resort buyouts</span><span class="rc-tag">Multi-day wedding weekends</span></div>
+        <ul class="rc-highlights"><li>Expansive beachfront venues</li><li>Ideal for larger celebrations</li><li>Exclusive resort buyout opportunities</li><li>Multiple events across one destination</li></ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="resorts-highlights-bar">
+    <div class="rhb-item"><div class="rhb-val">7</div><div class="rhb-lbl">Versatile Event Venues</div></div>
+    <div class="rhb-item"><div class="rhb-val" style="font-size:1.1rem">Up to 700</div><div class="rhb-lbl">Guests Capacity</div></div>
+    <div class="rhb-item"><div class="rhb-val">Unlimited</div><div class="rhb-lbl">Gourmet Dining &amp; Premium Beverages</div></div>
+    <div class="rhb-item"><div class="rhb-val">All-Inclusive</div><div class="rhb-lbl">Luxury Wedding Experience</div></div>
+  </div>
+</section>
+
+<!-- VENUE SHOWCASE — Section 8 -->
+<section class="sec sec-ivory" id="venues">
+  <div class="sec-hd sec-hd-c">
+    <div class="eyebrow">Wedding Venues</div>
+    <div class="divider divider--center"><div class="divider-diamond"></div></div>
+    <h2 class="sec-title">Seven Signature Venues for<br/><em>Timeless Celebrations</em></h2>
+    <p class="body" style="margin-top:0.9rem;max-width:620px;margin-left:auto;margin-right:auto">Oceanfront vows at sunset. Candlelit garden celebrations. Every venue crafted to bring your traditions to life in a setting as meaningful as the moment itself.</p>
+  </div>
+
+  <div class="card-sec-inner-2">
+  <div class="venue-cards-grid" id="locations">
+
+    <!-- Ballroom -->
+    <div class="vc">
+      <div class="vc-img">
+        <img loading="lazy" src="images/DSC02338.jpg" alt="Ballroom"/>
+        <span class="vc-badge">Up to 700 Guests</span>
+      </div>
+      <div class="vc-body">
+        <h3 class="vc-name">Ballroom</h3>
+        <p class="vc-desc">Climate-controlled grandeur with a premium dance floor.</p>
+        <div class="vc-caps">
+          <div class="vc-cap-item"><span class="vc-cap-label">Ceremony</span><span class="vc-cap-val">500</span></div>
+          <div class="vc-cap-item"><span class="vc-cap-label">Cocktail</span><span class="vc-cap-val">700</span></div>
+          <div class="vc-cap-item"><span class="vc-cap-label">Reception</span><span class="vc-cap-val">410</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Macao Plaza -->
+    <div class="vc">
+      <div class="vc-img">
+        <img loading="lazy" src="images/Day2cam100454.jpg" alt="Macao Plaza"/>
+        <span class="vc-badge">Up to 500 Guests</span>
+      </div>
+      <div class="vc-body">
+        <h3 class="vc-name">Macao Plaza</h3>
+        <p class="vc-desc">An expansive plaza built for a grand Baraat &amp; Sangeet.</p>
+        <div class="vc-caps">
+          <div class="vc-cap-item"><span class="vc-cap-label">Ceremony</span><span class="vc-cap-val">500</span></div>
+          <div class="vc-cap-item"><span class="vc-cap-label">Cocktail</span><span class="vc-cap-val">500</span></div>
+          <div class="vc-cap-item"><span class="vc-cap-label">Reception</span><span class="vc-cap-val">250</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Macao Preferred Beach -->
+    <div class="vc">
+      <div class="vc-img">
+        <img loading="lazy" src="images/CAS03643.jpg" alt="Macao Preferred Beach"/>
+        <span class="vc-badge">Up to 350 Guests</span>
+      </div>
+      <div class="vc-body">
+        <h3 class="vc-name">Macao Preferred Beach</h3>
+        <p class="vc-desc">Toes in the sand, the Caribbean as your backdrop.</p>
+        <div class="vc-caps">
+          <div class="vc-cap-item"><span class="vc-cap-label">Ceremony</span><span class="vc-cap-val">300–350</span></div>
+          <div class="vc-cap-item"><span class="vc-cap-label">Cocktail</span><span class="vc-cap-val">300–350</span></div>
+          <div class="vc-cap-item"><span class="vc-cap-label">Reception</span><span class="vc-cap-val">300–350</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Himitsu Garden Terrace -->
+    <div class="vc">
+      <div class="vc-img">
+        <img loading="lazy" src="images/DSC03222-Editar.jpg" alt="Himitsu Garden Terrace"/>
+        <span class="vc-badge">Up to 250 Guests</span>
+      </div>
+      <div class="vc-body">
+        <h3 class="vc-name">Himitsu Garden Terrace</h3>
+        <p class="vc-desc">A lush open-air lawn framed by swaying palms.</p>
+        <div class="vc-caps">
+          <div class="vc-cap-item"><span class="vc-cap-label">Ceremony</span><span class="vc-cap-val">180</span></div>
+          <div class="vc-cap-item"><span class="vc-cap-label">Cocktail</span><span class="vc-cap-val">250</span></div>
+          <div class="vc-cap-item"><span class="vc-cap-label">Reception</span><span class="vc-cap-val">160</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seaside Grill Garden Terrace -->
+    <div class="vc">
+      <div class="vc-img">
+        <img loading="lazy" src="images/Decor 1.jpg" alt="Seaside Grill Garden Terrace"/>
+        <span class="vc-badge">Up to 250 Guests</span>
+      </div>
+      <div class="vc-body">
+        <h3 class="vc-name">Seaside Grill Garden Terrace</h3>
+        <p class="vc-desc">Open-air garden terrace by the sea.</p>
+        <div class="vc-caps">
+          <div class="vc-cap-item"><span class="vc-cap-label">Ceremony</span><span class="vc-cap-val">200</span></div>
+          <div class="vc-cap-item"><span class="vc-cap-label">Cocktail</span><span class="vc-cap-val">250</span></div>
+          <div class="vc-cap-item"><span class="vc-cap-label">Reception</span><span class="vc-cap-val">200</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Beach Gazebo -->
+    <div class="vc">
+      <div class="vc-img">
+        <img loading="lazy" src="images/Sangeet.jpg.jpg" alt="Beach Gazebo"/>
+        <span class="vc-badge">Up to 40 Guests</span>
+      </div>
+      <div class="vc-body">
+        <h3 class="vc-name">Beach Gazebo</h3>
+        <p class="vc-desc">Intimate ceremony with ocean views.</p>
+        <div class="vc-caps">
+          <div class="vc-cap-item"><span class="vc-cap-label">Ceremony</span><span class="vc-cap-val">Up to 40</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sugar Reef Terrace -->
+    <div class="vc">
+      <div class="vc-img">
+        <img loading="lazy" src="images/PostWedding.jpg.jpg" alt="Sugar Reef Terrace"/>
+        <span class="vc-badge">Up to 120 Guests</span>
+      </div>
+      <div class="vc-body">
+        <h3 class="vc-name">Sugar Reef Terrace</h3>
+        <p class="vc-desc">Elegant terrace for cocktails and intimate receptions.</p>
+        <div class="vc-caps">
+          <div class="vc-cap-item"><span class="vc-cap-label">Cocktail</span><span class="vc-cap-val">120</span></div>
+          <div class="vc-cap-item"><span class="vc-cap-label">Reception</span><span class="vc-cap-val">70</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="sec sec-dark" id="packages">
+  <div class="sec-hd sec-hd-c" style="position:relative;z-index:1">
+    <div class="eyebrow" style="color:var(--gold2);justify-content:center">One Celebration. Two Extraordinary Ways to Experience It.</div>
+    <div class="divider divider--center divider--light"><div class="divider-diamond"></div></div>
+    <h2 class="sec-title lt">Two signature packages, each built for<br/><em>a different scale of celebration.</em></h2>
+    <p class="body lt" style="margin-top:0.9rem;max-width:560px">Ideal for both intimate gatherings and grand multi-day affairs.</p>
+  </div>
+  <div class="packages-grid" style="position:relative;z-index:1">
+    <div class="pkg-card pkg-dark">
+      <div class="pkg-header">
+        <div class="pkg-eyebrow">THE SHAADI PACKAGE</div>
+        <div class="pkg-name">The Ultimate Multi-Day Wedding Experience</div>
+        <p class="pkg-desc">Designed for grand celebrations that deserve dedicated planning, flexibility, and expert South Asian wedding coordination.</p>
+      </div>
+      <div class="pkg-body">
+        <div class="pkg-includes-title">INCLUDES</div>
+        <ul class="pkg-list">
+          <li>Up to 6 wedding events</li>
+          <li>3-day celebration experience</li>
+          <li>Accommodates up to 75 guests</li>
+          <li>Dedicated wedding coordinator</li>
+          <li>South Asian wedding expertise</li>
+          <li>Personalized planning and customization</li>
+        </ul>
+        <p class="pkg-closing">Perfect for families looking to celebrate every tradition without compromise.</p>
+      </div>
+    </div>
+    <div class="pkg-card pkg-light">
+      <div class="pkg-header" style="background:var(--ivory3)">
+        <div class="pkg-eyebrow" style="color:var(--gold4)">THE DULHA &amp; DULHAN PACKAGE</div>
+        <div class="pkg-name">The Complete Destination Wedding Experience</div>
+        <p class="pkg-desc">Thoughtfully curated for couples seeking a seamless destination wedding experience with every essential celebration included.</p>
+      </div>
+      <div class="pkg-body" style="background:var(--ivory)">
+        <div class="pkg-includes-title">INCLUDES</div>
+        <ul class="pkg-list">
+          <li>Welcome Cocktail celebration</li>
+          <li>Colourful Mehndi &amp; Sangeet</li>
+          <li>Grand Baraat Procession</li>
+          <li>Personalized Wedding Ceremony</li>
+          <li>Elegant Altar Design &amp; Styling</li>
+          <li>Wedding Reception Experience</li>
+          <li>Family Accommodation Benefits</li>
+          <li>Spa &amp; Wellness Privileges</li>
+          <li>Complimentary Honeymoon Enhancements</li>
+          <li>Seamless Group Arrival Coordination</li>
+          <li>Exclusive Resort Experiences &amp; Perks</li>
+        </ul>
+        <p class="pkg-closing">Ideal for couples planning an elegant destination wedding with family and friends.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY DESTINATIONPICK — FIX 4: Exclusive Partner Benefits copy corrected per content doc -->
+<section class="sec sec-ivory2" id="why-dp">
+  <div class="sec-hd sec-hd-c">
+    <div class="eyebrow">Why Book Through DestinationPick?</div>
+    <div class="divider divider--center"><div class="divider-diamond"></div></div>
+    <h2 class="sec-title">A Complete South Asian<br/><em>Wedding Destination</em></h2>
+    <p class="body" style="margin-top:0.9rem;max-width:560px">The big moments and the small details, all taken care of. A destination designed to honour tradition while delivering effortless Caribbean luxury for you and your loved ones.</p>
+  </div>
+  <div class="card-sec-inner-3">
+  <div class="dp-grid">
+    <div class="dp-item"><div><h4>Exclusive Partner Benefits</h4><p>The best rates and perks on your bookings, available exclusively through DestinationPick.</p></div></div>
+    <div class="dp-item"><div><h4>Venue Comparison Support</h4><p>We help you find the right Dreams property for your guest count, vision, and celebration style.</p></div></div>
+    <div class="dp-item"><div><h4>Travel Coordination</h4><p>Flights, transfers, and luxury stays managed for your entire guest group.</p></div></div>
+    <div class="dp-item"><div><h4>Vendor Management</h4><p>A curated network of cultural experts including DJs, dhol players, and décor specialists.</p></div></div>
+    <div class="dp-item"><div><h4>Guest Handling</h4><p>Smart room block management ensuring a smooth arrival experience for every guest.</p></div></div>
+    <div class="dp-item"><div><h4>Dedicated Wedding Specialist</h4><p>Your personal South Asian wedding expert from first enquiry to final dance.</p></div></div>
+  </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="sec sec-ivory" id="testimonials">
+  <div class="sec-hd sec-hd-c">
+    <div class="eyebrow">Real Weddings, Real Memories</div>
+    <div class="divider divider--center"><div class="divider-diamond"></div></div>
+    <h2 class="sec-title">Couples Who Celebrated<br/><em>with Dreams &amp; DestinationPick</em></h2>
+    <p class="body" style="margin-top:0.9rem;max-width:460px">In the words of South Asian families from across North America.</p>
+  </div>
+  <div class="card-sec-inner-4">
+  <div class="tgrid">
+    <div class="tcard">
+      <p class="tc-text">From Haldi rituals to our beachfront Baraat, everything felt effortless. We didn't worry about a single detail. Our guests still talk about it.</p>
+      <div class="tc-foot"><div class="tc-avatar">PA</div><div><div class="tc-name">Priya &amp; Arjun Mehta</div><div class="tc-det">USA/India &middot; 180 Guests</div></div></div>
+    </div>
+    <div class="tcard">
+      <p class="tc-text">Our wedding ceremony and halal catering were handled with such respect and perfection — it felt truly personal.</p>
+      <div class="tc-foot"><div class="tc-avatar">SA</div><div><div class="tc-name">Sara &amp; Ahmed Khan</div><div class="tc-det">Canada &middot; 220 Guests</div></div></div>
+    </div>
+    <div class="tcard">
+      <p class="tc-text">The entire experience felt like a dream vacation and wedding combined. Every moment was special.</p>
+      <div class="tc-foot"><div class="tc-avatar">RD</div><div><div class="tc-name">Riya &amp; Dev Sharma</div><div class="tc-det">Canada &middot; 150 Guests</div></div></div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- FINAL CTA + FORM — FIX 5 & 6: ci-mark checkmark symbol added; form unchanged -->
+<section class="sec sec-ivory2" id="consult">
+  <div class="form-layout">
+    <div>
+      <div class="eyebrow">Start Your Wedding Planning</div>
+      <div class="divider"><div class="divider-diamond"></div></div>
+      <h2 class="sec-title">Receive a Personalized Wedding Proposal <em>Within 24 Hours</em></h2>
+      <p class="body" style="margin-top:1rem">Our South Asian wedding specialists will design a fully customized multi-day celebration tailored to your traditions, guest count, and vision — completely free and with no obligation.</p>
+      <div class="chk">
+        <div class="ci"><div class="ci-mark">&#10003;</div><span>A fully personalized wedding journey itinerary</span></div>
+        <div class="ci"><div class="ci-mark">&#10003;</div><span>Curated venue and décor recommendations</span></div>
+        <div class="ci"><div class="ci-mark">&#10003;</div><span>Expert cultural ceremony planning guidance</span></div>
+        <div class="ci"><div class="ci-mark">&#10003;</div><span>Exclusive partner pricing and privileges</span></div>
+        <div class="ci"><div class="ci-mark">&#10003;</div><span>Real-time date availability confirmation</span></div>
+      </div>
+      <div style="margin-top:2rem;padding-top:1.5rem;border-top:1px solid var(--bdr)">
+        <p class="body" style="color:var(--muted)">Your details remain private. A dedicated specialist will respond within 24 hours, no spam, no obligation.</p>
+      </div>
+    </div>
+    <div class="form-card">
+      <h3>Request a Personalised Wedding Proposal</h3>
+      <p class="form-sub">Response within 24 hours</p>
+      <div class="fg"><label>Name *</label><input type="text" placeholder="Full name" id="fullName"/></div>
+      <div class="fg"><label>Email *</label><input type="email" placeholder="you@email.com" id="email"/></div>
+      <div class="fg"><label>Phone *</label><input type="tel" placeholder="+1 (___) ___-____" id="phone"/></div>
+      <div class="fg"><label>Wedding Date</label><input type="date" style="color-scheme:dark" id="preferredDate"/></div>
+      <div class="fg">
+        <label>Estimated Guest Count *</label>
+        <select id="guestCount">
+          <option value="">Select</option>
+          <option>Under 50</option>
+          <option>50 – 100</option>
+          <option>100 – 200</option>
+          <option>200 – 350</option>
+          <option>350 – 500</option>
+          <option>500+</option>
+        </select>
+      </div>
+      <div class="fg"><label>Budget</label><input type="text" placeholder="e.g. $50,000 – $100,000" id="budget"/></div>
+      <div class="fg">
+        <label>Preferred Destination</label>
+        <select id="destination">
+          <option value="">Select</option>
+          <option>Los Cabos</option>
+          <option>Cancún</option>
+          <option>Puerto Vallarta</option>
+          <option>Punta Cana</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <button class="form-btn" id="mainSubmitBtn" onclick="handleSubmit(this)">Request a Personalised Wedding Proposal</button>
+      <p class="form-note">Your details remain private. A dedicated specialist will respond within 24 hours, no spam, no obligation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <span class="footer-brand">Dreams Resorts &amp; Spas × DestinationPick — The destination wedding experience dedicated to Indian and South Asian families across North America.</span>
+    <div class="footer-copy">
+      <div>© 2026 Hyatt Inclusive Collection. All Rights Reserved.</div>
+      <div style="margin-top:0.25rem">Built in compliance with standard TICO &amp; IATAN data protection parameters.</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function scrollLoc(dir){var vp=document.querySelector('.loc-viewport');if(vp){vp.scrollBy({left:dir*340,behavior:'smooth'});}}
+function handleHeroSubmit(btn){
+  var req=['hFullName','hEmail','hPhone','hGuests'];var ok=true;
+  req.forEach(function(id){var el=document.getElementById(id);if(el&&!el.value.trim()){el.style.borderColor='#e74c3c';ok=false;}else if(el)el.style.borderColor='';});
+  if(!ok)return;btn.textContent='Submitting...';btn.disabled=true;
+  var d={fullName:document.getElementById('hFullName').value.trim(),email:document.getElementById('hEmail').value.trim(),phone:document.getElementById('hPhone').value.trim(),weddingDate:document.getElementById('hDate').value||'Not specified',guestCount:document.getElementById('hGuests').value||'Not specified',destination:document.getElementById('hDest').value||'Not specified',source:'Hero Form'};
+  submitToSheets(d,btn);
+}
+function handleSubmit(btn){
+  var req=['fullName','email','phone','guestCount'];var ok=true;
+  req.forEach(function(id){var el=document.getElementById(id);if(el&&!el.value.trim()){el.style.borderColor='#e74c3c';ok=false;}else if(el)el.style.borderColor='';});
+  if(!ok)return;btn.textContent='Submitting...';btn.disabled=true;
+  var d={fullName:document.getElementById('fullName').value.trim(),email:document.getElementById('email').value.trim(),phone:document.getElementById('phone').value.trim(),preferredDate:document.getElementById('preferredDate').value||'Not specified',guestCount:document.getElementById('guestCount').value||'Not specified',budget:document.getElementById('budget').value.trim()||'Not specified',destination:document.getElementById('destination').value||'Not specified',source:'Main Form'};
+  submitToSheets(d,btn);
+}
+function submitToSheets(data,btn){
+  var scriptURL='https://script.google.com/macros/s/AKfycbw79KtWxihtqg4-B352C4hUzz1LYRsjUW0hsQzevRuFghYQiFFnDJ-Fvca9uBoxmJhb/exec';
+  var xhr=new XMLHttpRequest();xhr.open('POST',scriptURL,true);xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+  xhr.onreadystatechange=function(){if(xhr.readyState===4){window.location.href='thank.html';}};
+  xhr.onerror=function(){window.location.href='thank.html';};
+  xhr.send('data='+encodeURIComponent(JSON.stringify(data)));
+}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length>1){var t=document.querySelector(id);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}}});});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  if(!window.gsap||!window.ScrollTrigger){return;}
+  gsap.registerPlugin(ScrollTrigger);
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){return;}
+  function build(){
+    var section=document.querySelector('.loc-pin');if(!section)return;
+    var sticky=section.querySelector('.loc-sticky');var track=section.querySelector('.loc-track');var bar=section.querySelector('.loc-progress span');if(!track)return;
+    var mm=gsap.matchMedia();
+    mm.add('(min-width: 1024px)',function(){
+      var distance=function(){return Math.max(0,track.scrollWidth-track.parentElement.clientWidth);};
+      var tween=gsap.to(track,{x:function(){return -distance();},ease:'none',scrollTrigger:{trigger:section,start:'top top',end:function(){return '+='+distance();},scrub:0.8,pin:sticky,anticipatePin:1,invalidateOnRefresh:true,onUpdate:function(self){if(bar){bar.style.width=(self.progress*100).toFixed(2)+'%';}}}});
+      return function(){if(tween.scrollTrigger){tween.scrollTrigger.kill();}tween.kill();gsap.set(track,{clearProps:'transform'});};
+    });
+  }
+  function init(){build();var refresh=function(){ScrollTrigger.refresh();};window.addEventListener('load',refresh);if(document.fonts&&document.fonts.ready){document.fonts.ready.then(function(){setTimeout(refresh,60);});}setTimeout(refresh,350);}
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{setTimeout(init,0);}
+})();
+</script>
+<script>
+function initCardScroll() {
+  if (window.innerWidth > 768) return;
+  var scrollers = [
+    { el: document.querySelector('.card-sec-inner'),   cards: document.querySelectorAll('.card-sec-inner .resort-card') },
+    { el: document.querySelector('.card-sec-inner-2'), cards: document.querySelectorAll('.card-sec-inner-2 .vc') },
+    { el: document.querySelector('.card-sec-inner-3'), cards: document.querySelectorAll('.card-sec-inner-3 .dp-item') },
+    { el: document.querySelector('.card-sec-inner-4'), cards: document.querySelectorAll('.card-sec-inner-4 .tcard') }
+  ];
+  function updateActive(scroller) {
+    if (!scroller.el) return;
+    var center = scroller.el.scrollLeft + scroller.el.offsetWidth / 2;
+    scroller.cards.forEach(function(card) {
+      var cardCenter = card.offsetLeft + card.offsetWidth / 2;
+      if (Math.abs(center - cardCenter) < card.offsetWidth * 0.6) {
+        card.classList.add('is-active');
+      } else {
+        card.classList.remove('is-active');
+      }
+    });
+  }
+  scrollers.forEach(function(s) {
+    if (!s.el) return;
+    if (s.cards[0]) s.cards[0].classList.add('is-active');
+    s.el.addEventListener('scroll', function() {
+      requestAnimationFrame(function() { updateActive(s); });
+    }, { passive: true });
+  });
+}
+window.addEventListener('load', initCardScroll);
+window.addEventListener('resize', initCardScroll);
+</script>
+</body>
+</html>
