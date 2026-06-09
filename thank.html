@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Thank You — Dreams Macao Beach</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --ivory:#FBFCFE; --ivory2:#F1F6FB; --ivory3:#E6EFF7;
+  --night:#0E2438; --night2:#14304A; --night3:#24486A;
+  --gold:#6FA8CE; --gold2:#8FC0DE; --gold3:#BFDCEE; --gold4:#3F7BA6;
+  --ink:#16344E; --ink2:#2C5070; --muted:#5B748C; --soft:#8AA2B8;
+  --serif:'Cormorant Garamond',Georgia,serif; --sans:'Outfit',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--night);color:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
+a{text-decoration:none;color:inherit}
+
+.thank-wrap{
+  position:relative;
+  width:100%;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:3rem 1.5rem;
+  overflow:hidden;
+}
+.thank-bg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:0;
+  opacity:0.3;
+}
+.thank-scrim{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  background:linear-gradient(to bottom,rgba(14,36,56,0.7),rgba(14,36,56,0.9));
+}
+.thank-card{
+  position:relative;
+  z-index:2;
+  text-align:center;
+  max-width:580px;
+  background:rgba(14,36,56,0.6);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border:1px solid rgba(111,168,206,0.2);
+  border-radius:24px;
+  padding:4rem 3rem;
+  box-shadow:0 20px 60px rgba(0,0,0,0.3);
+}
+.thank-icon{
+  font-size:3.5rem;
+  margin-bottom:1.5rem;
+  animation:bounceIn 0.6s ease;
+}
+@keyframes bounceIn{
+  0%{transform:scale(0.3);opacity:0}
+  50%{transform:scale(1.1)}
+  100%{transform:scale(1);opacity:1}
+}
+.thank-title{
+  font-family:var(--serif);
+  font-size:clamp(2rem,5vw,3rem);
+  font-weight:700;
+  color:#fff;
+  margin-bottom:1rem;
+  line-height:1.15;
+}
+.thank-title em{
+  font-style:italic;
+  color:var(--gold2);
+}
+.thank-line{
+  width:60px;
+  height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold2),transparent);
+  margin:1.5rem auto;
+}
+.thank-body{
+  font-size:1.05rem;
+  color:rgba(255,255,255,0.85);
+  line-height:1.8;
+  margin-bottom:1.5rem;
+}
+.thank-body strong{
+  color:#fff;
+  font-size:1.1rem;
+}
+.thank-note{
+  font-size:0.9rem;
+  color:rgba(255,255,255,0.5);
+  font-style:italic;
+  margin-bottom:2rem;
+}
+.thank-btn{
+  display:inline-block;
+  background:var(--gold);
+  color:var(--night);
+  padding:0.9rem 2.4rem;
+  font-size:0.72rem;
+  font-weight:600;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  border-radius:100px;
+  transition:background .2s,transform .2s;
+}
+.thank-btn:hover{
+  background:var(--gold2);
+  transform:translateY(-2px);
+}
+.thank-footer{
+  margin-top:2.5rem;
+  padding-top:1.5rem;
+  border-top:1px solid rgba(111,168,206,0.15);
+  font-size:0.7rem;
+  color:rgba(255,255,255,0.3);
+  letter-spacing:0.05em;
+}
+
+@media(max-width:600px){
+  .thank-card{padding:3rem 1.5rem;border-radius:18px}
+}
+</style>
+</head>
+<body>
+
+<div class="thank-wrap">
+  <img class="thank-bg" src="images/banner.jpg.jpg" alt="Dreams Macao Beach"/>
+  <div class="thank-scrim"></div>
+  <div class="thank-card">
+    <div class="thank-icon">🎉</div>
+    <h1 class="thank-title">Thank You!</h1>
+    <div class="thank-line"></div>
+    <p class="thank-body">
+      Your request has been received successfully.<br/><br/>
+      Our dedicated South Asian wedding specialist will get in touch with you within <strong>24 hours</strong> to craft your perfect celebration.
+    </p>
+    <p class="thank-note">We can't wait to help you plan the wedding of your dreams.</p>
+    <a href="index.html" class="thank-btn">Back to Home</a>
+    <div class="thank-footer">Dreams Macao Beach × DestinationPick</div>
+  </div>
+</div>
+
+</body>
+</html>
