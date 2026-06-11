@@ -702,36 +702,38 @@ img{display:block;max-width:100%}
     <div class="form-card">
       <h3>Request a Personalised Wedding Proposal</h3>
       <p class="form-sub">Response within 24 hours</p>
-      <div class="fg"><label>Name *</label><input type="text" placeholder="Full name" id="name" required/></div>
-      <div class="fg"><label>Email *</label><input type="email" placeholder="you@email.com" id="email" required/></div>
-      <div class="fg"><label>Phone *</label><input type="tel" placeholder="+1 (___) ___-____" id="phone" required/></div>
-      <div class="fg"><label>Wedding Date *</label><input type="date" style="color-scheme:dark" id="weddingDate" required/></div>
-      <div class="fg">
-        <label>Guest Count *</label>
-        <select id="guestCount" required>
-          <option value="">Select</option>
-          <option>Under 50</option>
-          <option>50 – 100</option>
-          <option>100 – 200</option>
-          <option>200 – 350</option>
-          <option>350 – 500</option>
-          <option>500+</option>
-        </select>
-      </div>
-      <div class="fg"><label>Budget *</label><input type="text" placeholder="e.g. $50,000 – $100,000" id="budget" required/></div>
-      <div class="fg">
-        <label>Destination *</label>
-        <select id="destination" required>
-          <option value="">Select</option>
-          <option>Los Cabos</option>
-          <option>Cancún</option>
-          <option>Puerto Vallarta</option>
-          <option>Punta Cana</option>
-          <option>Not sure yet</option>
-        </select>
-      </div>
-      <button class="form-btn" id="mainSubmitBtn" type="button" onclick="handleSubmit(this)">Request a Personalised Wedding Proposal</button>
-      <p class="form-note">Your details remain private. A dedicated specialist will respond within 24 hours, no spam, no obligation.</p>
+      <form id="weddingForm" onsubmit="return handleSubmit(event)">
+        <div class="fg"><label>Name *</label><input type="text" placeholder="Full name" id="name" name="name" required/></div>
+        <div class="fg"><label>Email *</label><input type="email" placeholder="you@email.com" id="email" name="email" required/></div>
+        <div class="fg"><label>Phone *</label><input type="tel" placeholder="+1 (___) ___-____" id="phone" name="phone" required/></div>
+        <div class="fg"><label>Wedding Date *</label><input type="date" style="color-scheme:dark" id="weddingDate" name="weddingDate" required/></div>
+        <div class="fg">
+          <label>Guest Count *</label>
+          <select id="guestCount" name="guestCount" required>
+            <option value="">Select</option>
+            <option value="Under 50">Under 50</option>
+            <option value="50 – 100">50 – 100</option>
+            <option value="100 – 200">100 – 200</option>
+            <option value="200 – 350">200 – 350</option>
+            <option value="350 – 500">350 – 500</option>
+            <option value="500+">500+</option>
+          </select>
+        </div>
+        <div class="fg"><label>Budget *</label><input type="text" placeholder="e.g. $50,000 – $100,000" id="budget" name="budget" required/></div>
+        <div class="fg">
+          <label>Destination *</label>
+          <select id="destination" name="destination" required>
+            <option value="">Select</option>
+            <option value="Los Cabos">Los Cabos</option>
+            <option value="Cancún">Cancún</option>
+            <option value="Puerto Vallarta">Puerto Vallarta</option>
+            <option value="Punta Cana">Punta Cana</option>
+            <option value="Not sure yet">Not sure yet</option>
+          </select>
+        </div>
+        <button class="form-btn" id="mainSubmitBtn" type="submit">Request a Personalised Wedding Proposal</button>
+        <p class="form-note">Your details remain private. A dedicated specialist will respond within 24 hours, no spam, no obligation.</p>
+      </form>
     </div>
   </div>
 </section>
@@ -748,92 +750,35 @@ img{display:block;max-width:100%}
 
 <script>
 function scrollLoc(dir){var vp=document.querySelector('.loc-viewport');if(vp){vp.scrollBy({left:dir*340,behavior:'smooth'});}}
-function handleSubmit(btn){
-  console.log('Form submit clicked');
+function handleSubmit(e){
+  e.preventDefault();
+  console.log('Form submit');
   
-  // Get all field values
-  var name = document.getElementById('name').value;
-  var email = document.getElementById('email').value;
-  var phone = document.getElementById('phone').value;
-  var weddingDate = document.getElementById('weddingDate').value;
-  var guestCount = document.getElementById('guestCount').value;
-  var budget = document.getElementById('budget').value;
-  var destination = document.getElementById('destination').value;
+  var btn = document.getElementById('mainSubmitBtn');
+  var form = document.getElementById('weddingForm');
   
-  console.log('Field values:', {name:name, email:email, phone:phone, weddingDate:weddingDate, guestCount:guestCount, budget:budget, destination:destination});
+  // Use FormData to get all values
+  var formData = new FormData(form);
+  var data = {
+    name: formData.get('name'),
+    email: formData.get('email'),
+    phone: formData.get('phone'),
+    weddingDate: formData.get('weddingDate'),
+    guestCount: formData.get('guestCount'),
+    budget: formData.get('budget'),
+    destination: formData.get('destination')
+  };
   
-  // Reset all borders first
-  document.getElementById('name').style.borderColor='';
-  document.getElementById('email').style.borderColor='';
-  document.getElementById('phone').style.borderColor='';
-  document.getElementById('weddingDate').style.borderColor='';
-  document.getElementById('guestCount').style.borderColor='';
-  document.getElementById('budget').style.borderColor='';
-  document.getElementById('destination').style.borderColor='';
+  console.log('Submitting:', data);
   
-  // Validate - check if any field is empty
-  var errors = [];
-  if(!name || name.trim()==='') { 
-    document.getElementById('name').style.borderColor='#e74c3c'; 
-    errors.push('name');
-  }
-  if(!email || email.trim()==='') { 
-    document.getElementById('email').style.borderColor='#e74c3c'; 
-    errors.push('email');
-  }
-  if(!phone || phone.trim()==='') { 
-    document.getElementById('phone').style.borderColor='#e74c3c'; 
-    errors.push('phone');
-  }
-  if(!weddingDate || weddingDate.trim()==='') { 
-    document.getElementById('weddingDate').style.borderColor='#e74c3c'; 
-    errors.push('wedding date');
-  }
-  if(!guestCount || guestCount.trim()==='') { 
-    document.getElementById('guestCount').style.borderColor='#e74c3c'; 
-    errors.push('guest count');
-  }
-  if(!budget || budget.trim()==='') { 
-    document.getElementById('budget').style.borderColor='#e74c3c'; 
-    errors.push('budget');
-  }
-  if(!destination || destination.trim()==='') { 
-    document.getElementById('destination').style.borderColor='#e74c3c'; 
-    errors.push('destination');
-  }
-  
-  if(errors.length > 0){
-    console.log('Validation failed for:', errors);
-    alert('Please fill all required fields.');
-    return false;
-  }
-  
-  console.log('All fields validated, submitting...');
   btn.textContent='Submitting...';
   btn.disabled=true;
   
-  var d={
-    name: name.trim(),
-    email: email.trim(),
-    phone: phone.trim(),
-    weddingDate: weddingDate,
-    guestCount: guestCount,
-    budget: budget.trim(),
-    destination: destination
-  };
-  
-  console.log('Submitting data:', d);
-  submitToSheets(d,btn);
-  return false;
-}
-function submitToSheets(data,btn){
   var scriptURL='https://script.google.com/macros/s/AKfycbw79KtWxihtqg4-B352C4hUzz1LYRsjUW0hsQzevRuFghYQiFFnDJ-Fvca9uBoxmJhb/exec';
   var params = new URLSearchParams(data).toString();
-  console.log('Submitting to:', scriptURL + '?' + params);
   
-  // Add timeout fallback
   var timeout = setTimeout(function() {
-    console.log('Request timeout, redirecting...');
+    console.log('Timeout, redirecting...');
     window.location.href = 'thank.html';
   }, 5000);
   
@@ -843,14 +788,16 @@ function submitToSheets(data,btn){
   })
     .then(function() { 
       clearTimeout(timeout);
-      console.log('Form submitted successfully');
+      console.log('Success');
       window.location.href = 'thank.html'; 
     })
     .catch(function(err) { 
       clearTimeout(timeout);
-      console.error('Submission error:', err);
+      console.error('Error:', err);
       window.location.href = 'thank.html'; 
     });
+  
+  return false;
 }
 document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length>1){var t=document.querySelector(id);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}}});});
 </script>
