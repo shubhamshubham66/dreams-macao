@@ -730,7 +730,7 @@ img{display:block;max-width:100%}
           <option>Not sure yet</option>
         </select>
       </div>
-      <button class="form-btn" id="mainSubmitBtn" onclick="handleSubmit(this)">Request a Personalised Wedding Proposal</button>
+      <button class="form-btn" id="mainSubmitBtn" type="button" onclick="handleSubmit(this)">Request a Personalised Wedding Proposal</button>
       <p class="form-note">Your details remain private. A dedicated specialist will respond within 24 hours, no spam, no obligation.</p>
     </div>
   </div>
@@ -750,6 +750,9 @@ img{display:block;max-width:100%}
 function scrollLoc(dir){var vp=document.querySelector('.loc-viewport');if(vp){vp.scrollBy({left:dir*340,behavior:'smooth'});}}
 function handleSubmit(btn){
   console.log('Form submit clicked');
+  
+  // Prevent any default action
+  if(event) event.preventDefault();
   
   // Get all field values
   var name = document.getElementById('name').value;
@@ -775,7 +778,7 @@ function handleSubmit(btn){
   if(!ok){
     console.log('Validation failed');
     alert('Please fill all required fields.');
-    return;
+    return false;
   }
   
   console.log('All fields validated, submitting...');
@@ -794,20 +797,30 @@ function handleSubmit(btn){
   
   console.log('Submitting data:', d);
   submitToSheets(d,btn);
+  return false;
 }
 function submitToSheets(data,btn){
   var scriptURL='https://script.google.com/macros/s/AKfycbw79KtWxihtqg4-B352C4hUzz1LYRsjUW0hsQzevRuFghYQiFFnDJ-Fvca9uBoxmJhb/exec';
   var params = new URLSearchParams(data).toString();
   console.log('Submitting to:', scriptURL + '?' + params);
+  
+  // Add timeout fallback
+  var timeout = setTimeout(function() {
+    console.log('Request timeout, redirecting...');
+    window.location.href = 'thank.html';
+  }, 5000);
+  
   fetch(scriptURL + '?' + params, { 
     method: 'GET',
     mode: 'no-cors' 
   })
     .then(function() { 
+      clearTimeout(timeout);
       console.log('Form submitted successfully');
       window.location.href = 'thank.html'; 
     })
     .catch(function(err) { 
+      clearTimeout(timeout);
       console.error('Submission error:', err);
       window.location.href = 'thank.html'; 
     });
