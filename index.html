@@ -776,7 +776,7 @@ function handleSubmit(btn){
   submitToSheets(d,btn);
 }
 function submitToSheets(data,btn){
-  var scriptURL='REPLACE_WITH_YOUR_GOOGLE_APPS_SCRIPT_URL';
+  var scriptURL='https://script.google.com/macros/s/AKfycbw79KtWxihtqg4-B352C4hUzz1LYRsjUW0hsQzevRuFghYQiFFnDJ-Fvca9uBoxmJhb/exec';
   data.timestamp = new Date().toISOString();
   data.formType = 'Dreams Macao Wedding Form';
   var params = new URLSearchParams(data).toString();
