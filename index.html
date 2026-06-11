@@ -702,13 +702,13 @@ img{display:block;max-width:100%}
     <div class="form-card">
       <h3>Request a Personalised Wedding Proposal</h3>
       <p class="form-sub">Response within 24 hours</p>
-      <div class="fg"><label>Name *</label><input type="text" placeholder="Full name" id="fullName"/></div>
-      <div class="fg"><label>Email *</label><input type="email" placeholder="you@email.com" id="email"/></div>
-      <div class="fg"><label>Phone *</label><input type="tel" placeholder="+1 (___) ___-____" id="phone"/></div>
-      <div class="fg"><label>Wedding Date</label><input type="date" style="color-scheme:dark" id="preferredDate"/></div>
+      <div class="fg"><label>Name *</label><input type="text" placeholder="Full name" id="name" required/></div>
+      <div class="fg"><label>Email *</label><input type="email" placeholder="you@email.com" id="email" required/></div>
+      <div class="fg"><label>Phone *</label><input type="tel" placeholder="+1 (___) ___-____" id="phone" required/></div>
+      <div class="fg"><label>Wedding Date *</label><input type="date" style="color-scheme:dark" id="weddingDate" required/></div>
       <div class="fg">
-        <label>Estimated Guest Count *</label>
-        <select id="guestCount">
+        <label>Guest Count *</label>
+        <select id="guestCount" required>
           <option value="">Select</option>
           <option>Under 50</option>
           <option>50 – 100</option>
@@ -718,10 +718,10 @@ img{display:block;max-width:100%}
           <option>500+</option>
         </select>
       </div>
-      <div class="fg"><label>Budget</label><input type="text" placeholder="e.g. $50,000 – $100,000" id="budget"/></div>
+      <div class="fg"><label>Budget *</label><input type="text" placeholder="e.g. $50,000 – $100,000" id="budget" required/></div>
       <div class="fg">
-        <label>Preferred Destination</label>
-        <select id="destination">
+        <label>Destination *</label>
+        <select id="destination" required>
           <option value="">Select</option>
           <option>Los Cabos</option>
           <option>Cancún</option>
@@ -749,7 +749,7 @@ img{display:block;max-width:100%}
 <script>
 function scrollLoc(dir){var vp=document.querySelector('.loc-viewport');if(vp){vp.scrollBy({left:dir*340,behavior:'smooth'});}}
 function handleSubmit(btn){
-  var req=['fullName','email','phone','guestCount'];
+  var req=['name','email','phone','weddingDate','guestCount','budget','destination'];
   var ok=true;
   req.forEach(function(id){
     var el=document.getElementById(id);
@@ -767,21 +767,18 @@ function handleSubmit(btn){
   btn.textContent='Submitting...';
   btn.disabled=true;
   var d={
-    fullName:document.getElementById('fullName').value.trim(),
+    name:document.getElementById('name').value.trim(),
     email:document.getElementById('email').value.trim(),
     phone:document.getElementById('phone').value.trim(),
-    preferredDate:document.getElementById('preferredDate').value||'Not specified',
-    guestCount:document.getElementById('guestCount').value||'Not specified',
-    budget:document.getElementById('budget').value.trim()||'Not specified',
-    destination:document.getElementById('destination').value||'Not specified',
-    source:'Main Form'
+    weddingDate:document.getElementById('weddingDate').value,
+    guestCount:document.getElementById('guestCount').value,
+    budget:document.getElementById('budget').value.trim(),
+    destination:document.getElementById('destination').value
   };
   submitToSheets(d,btn);
 }
 function submitToSheets(data,btn){
   var scriptURL='https://script.google.com/macros/s/AKfycbw79KtWxihtqg4-B352C4hUzz1LYRsjUW0hsQzevRuFghYQiFFnDJ-Fvca9uBoxmJhb/exec';
-  data.timestamp = new Date().toISOString();
-  data.formType = 'Dreams Macao Wedding Form';
   var params = new URLSearchParams(data).toString();
   console.log('Submitting to:', scriptURL + '?' + params);
   fetch(scriptURL + '?' + params, { 
