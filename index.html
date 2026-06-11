@@ -751,9 +751,6 @@ function scrollLoc(dir){var vp=document.querySelector('.loc-viewport');if(vp){vp
 function handleSubmit(btn){
   console.log('Form submit clicked');
   
-  // Prevent any default action
-  if(event) event.preventDefault();
-  
   // Get all field values
   var name = document.getElementById('name').value;
   var email = document.getElementById('email').value;
@@ -765,18 +762,48 @@ function handleSubmit(btn){
   
   console.log('Field values:', {name:name, email:email, phone:phone, weddingDate:weddingDate, guestCount:guestCount, budget:budget, destination:destination});
   
-  // Validate - check if any field is empty
-  var ok = true;
-  if(!name || name.trim()==='') { document.getElementById('name').style.borderColor='#e74c3c'; ok=false; } else { document.getElementById('name').style.borderColor=''; }
-  if(!email || email.trim()==='') { document.getElementById('email').style.borderColor='#e74c3c'; ok=false; } else { document.getElementById('email').style.borderColor=''; }
-  if(!phone || phone.trim()==='') { document.getElementById('phone').style.borderColor='#e74c3c'; ok=false; } else { document.getElementById('phone').style.borderColor=''; }
-  if(!weddingDate) { document.getElementById('weddingDate').style.borderColor='#e74c3c'; ok=false; } else { document.getElementById('weddingDate').style.borderColor=''; }
-  if(!guestCount) { document.getElementById('guestCount').style.borderColor='#e74c3c'; ok=false; } else { document.getElementById('guestCount').style.borderColor=''; }
-  if(!budget || budget.trim()==='') { document.getElementById('budget').style.borderColor='#e74c3c'; ok=false; } else { document.getElementById('budget').style.borderColor=''; }
-  if(!destination) { document.getElementById('destination').style.borderColor='#e74c3c'; ok=false; } else { document.getElementById('destination').style.borderColor=''; }
+  // Reset all borders first
+  document.getElementById('name').style.borderColor='';
+  document.getElementById('email').style.borderColor='';
+  document.getElementById('phone').style.borderColor='';
+  document.getElementById('weddingDate').style.borderColor='';
+  document.getElementById('guestCount').style.borderColor='';
+  document.getElementById('budget').style.borderColor='';
+  document.getElementById('destination').style.borderColor='';
   
-  if(!ok){
-    console.log('Validation failed');
+  // Validate - check if any field is empty
+  var errors = [];
+  if(!name || name.trim()==='') { 
+    document.getElementById('name').style.borderColor='#e74c3c'; 
+    errors.push('name');
+  }
+  if(!email || email.trim()==='') { 
+    document.getElementById('email').style.borderColor='#e74c3c'; 
+    errors.push('email');
+  }
+  if(!phone || phone.trim()==='') { 
+    document.getElementById('phone').style.borderColor='#e74c3c'; 
+    errors.push('phone');
+  }
+  if(!weddingDate || weddingDate.trim()==='') { 
+    document.getElementById('weddingDate').style.borderColor='#e74c3c'; 
+    errors.push('wedding date');
+  }
+  if(!guestCount || guestCount.trim()==='') { 
+    document.getElementById('guestCount').style.borderColor='#e74c3c'; 
+    errors.push('guest count');
+  }
+  if(!budget || budget.trim()==='') { 
+    document.getElementById('budget').style.borderColor='#e74c3c'; 
+    errors.push('budget');
+  }
+  if(!destination || destination.trim()==='') { 
+    document.getElementById('destination').style.borderColor='#e74c3c'; 
+    errors.push('destination');
+  }
+  
+  if(errors.length > 0){
+    console.log('Validation failed for:', errors);
     alert('Please fill all required fields.');
     return false;
   }
