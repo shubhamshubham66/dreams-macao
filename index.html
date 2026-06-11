@@ -748,31 +748,34 @@ img{display:block;max-width:100%}
 
 <script>
 function scrollLoc(dir){var vp=document.querySelector('.loc-viewport');if(vp){vp.scrollBy({left:dir*340,behavior:'smooth'});}}
-function handleHeroSubmit(btn){
-  var req=['hFullName','hEmail','hPhone','hGuests'];var ok=true;
-  req.forEach(function(id){var el=document.getElementById(id);if(el&&!el.value.trim()){el.style.borderColor='#e74c3c';ok=false;}else if(el)el.style.borderColor='';});
-  if(!ok){alert('Please fill all required fields.');return;}
-  btn.disabled=true;btn.textContent='Submitting...';
-  var data={
-    fullName:document.getElementById('hFullName').value.trim(),
-    email:document.getElementById('hEmail').value.trim(),
-    phone:document.getElementById('hPhone').value.trim(),
-    guestCount:document.getElementById('hGuests').value||'Not specified',
-    weddingDate:document.getElementById('hDate').value||'Not specified',
-    budget:document.getElementById('hBudget').value.trim()||'Not specified',
-    destination:document.getElementById('hDest').value||'Not specified'
-  };
-  submitToSheets(data,btn);
-}
-  if(!ok)return;btn.textContent='Submitting...';btn.disabled=true;
-  var d={fullName:document.getElementById('hFullName').value.trim(),email:document.getElementById('hEmail').value.trim(),phone:document.getElementById('hPhone').value.trim(),weddingDate:document.getElementById('hDate').value||'Not specified',guestCount:document.getElementById('hGuests').value||'Not specified',destination:document.getElementById('hDest').value||'Not specified',source:'Hero Form'};
-  submitToSheets(d,btn);
-}
 function handleSubmit(btn){
-  var req=['fullName','email','phone','guestCount'];var ok=true;
-  req.forEach(function(id){var el=document.getElementById(id);if(el&&!el.value.trim()){el.style.borderColor='#e74c3c';ok=false;}else if(el)el.style.borderColor='';});
-  if(!ok)return;btn.textContent='Submitting...';btn.disabled=true;
-  var d={fullName:document.getElementById('fullName').value.trim(),email:document.getElementById('email').value.trim(),phone:document.getElementById('phone').value.trim(),preferredDate:document.getElementById('preferredDate').value||'Not specified',guestCount:document.getElementById('guestCount').value||'Not specified',budget:document.getElementById('budget').value.trim()||'Not specified',destination:document.getElementById('destination').value||'Not specified',source:'Main Form'};
+  var req=['fullName','email','phone','guestCount'];
+  var ok=true;
+  req.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el&&!el.value.trim()){
+      el.style.borderColor='#e74c3c';
+      ok=false;
+    }else if(el){
+      el.style.borderColor='';
+    }
+  });
+  if(!ok){
+    alert('Please fill all required fields.');
+    return;
+  }
+  btn.textContent='Submitting...';
+  btn.disabled=true;
+  var d={
+    fullName:document.getElementById('fullName').value.trim(),
+    email:document.getElementById('email').value.trim(),
+    phone:document.getElementById('phone').value.trim(),
+    preferredDate:document.getElementById('preferredDate').value||'Not specified',
+    guestCount:document.getElementById('guestCount').value||'Not specified',
+    budget:document.getElementById('budget').value.trim()||'Not specified',
+    destination:document.getElementById('destination').value||'Not specified',
+    source:'Main Form'
+  };
   submitToSheets(d,btn);
 }
 function submitToSheets(data,btn){
