@@ -323,13 +323,13 @@ img{display:block;max-width:100%}
     <div class="hero-form-card">
       <h3>Request a Personalised Wedding Proposal</h3>
       <p class="form-sub">Response within 24 hours</p>
-      <div class="fg"><label>Your Name *</label><input type="text" placeholder="Full name" id="hFullName"/></div>
-      <div class="fg"><label>Email Address *</label><input type="email" placeholder="you@email.com" id="hEmail"/></div>
-      <div class="fg"><label>Phone / WhatsApp *</label><input type="tel" placeholder="+1 (___) ___-____" id="hPhone"/></div>
-      <div class="fg"><label>Wedding Date</label><input type="date" style="color-scheme:dark" id="hDate"/></div>
+      <div class="fg"><label>Your Name *</label><input type="text" name="fullName" placeholder="Full name" id="hFullName" required/></div>
+      <div class="fg"><label>Email Address *</label><input type="email" name="email" placeholder="you@email.com" id="hEmail" required/></div>
+      <div class="fg"><label>Phone / WhatsApp *</label><input type="tel" name="phone" placeholder="+1 (___) ___-____" id="hPhone" required/></div>
+      <div class="fg"><label>Wedding Date</label><input type="date" name="weddingDate" style="color-scheme:dark" id="hDate"/></div>
       <div class="fg">
         <label>Estimated Guest Count *</label>
-        <select id="hGuests">
+        <select name="guestCount" id="hGuests" required>
           <option value="">Select</option>
           <option>Under 50</option>
           <option>50 – 100</option>
@@ -339,9 +339,10 @@ img{display:block;max-width:100%}
           <option>500+</option>
         </select>
       </div>
+      <div class="fg"><label>Budget</label><input type="text" name="budget" placeholder="e.g. $50,000 – $100,000" id="hBudget"/></div>
       <div class="fg">
         <label>Preferred Destination</label>
-        <select id="hDest">
+        <select name="destination" id="hDest">
           <option value="">Select</option>
           <option>Los Cabos</option>
           <option>Cancún</option>
@@ -787,6 +788,19 @@ function scrollLoc(dir){var vp=document.querySelector('.loc-viewport');if(vp){vp
 function handleHeroSubmit(btn){
   var req=['hFullName','hEmail','hPhone','hGuests'];var ok=true;
   req.forEach(function(id){var el=document.getElementById(id);if(el&&!el.value.trim()){el.style.borderColor='#e74c3c';ok=false;}else if(el)el.style.borderColor='';});
+  if(!ok){alert('Please fill all required fields.');return;}
+  btn.disabled=true;btn.textContent='Submitting...';
+  var data={
+    fullName:document.getElementById('hFullName').value.trim(),
+    email:document.getElementById('hEmail').value.trim(),
+    phone:document.getElementById('hPhone').value.trim(),
+    guestCount:document.getElementById('hGuests').value||'Not specified',
+    weddingDate:document.getElementById('hDate').value||'Not specified',
+    budget:document.getElementById('hBudget').value.trim()||'Not specified',
+    destination:document.getElementById('hDest').value||'Not specified'
+  };
+  submitToSheets(data,btn);
+}
   if(!ok)return;btn.textContent='Submitting...';btn.disabled=true;
   var d={fullName:document.getElementById('hFullName').value.trim(),email:document.getElementById('hEmail').value.trim(),phone:document.getElementById('hPhone').value.trim(),weddingDate:document.getElementById('hDate').value||'Not specified',guestCount:document.getElementById('hGuests').value||'Not specified',destination:document.getElementById('hDest').value||'Not specified',source:'Hero Form'};
   submitToSheets(d,btn);
@@ -799,8 +813,9 @@ function handleSubmit(btn){
   submitToSheets(d,btn);
 }
 function submitToSheets(data,btn){
-  var scriptURL='YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
-  data.submittedAt = new Date().toLocaleString();
+  var scriptURL='https://script.google.com/macros/s/AKfycbzG1HKftLJMFd_hB-GlpRUp-gqN_RQ14hj45jiDjNNNc_BHOMBvN0oAEHvHNZRI5I96/exec';
+  data.timestamp = new Date().toISOString();
+  data.formType = 'Dreams Macao Wedding Form';
   var params = new URLSearchParams(data).toString();
   fetch(scriptURL + '?' + params, { mode: 'no-cors' })
     .then(function() { window.location.href = 'thank.html'; })
