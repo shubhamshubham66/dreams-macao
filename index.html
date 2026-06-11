@@ -780,9 +780,19 @@ function submitToSheets(data,btn){
   data.timestamp = new Date().toISOString();
   data.formType = 'Dreams Macao Wedding Form';
   var params = new URLSearchParams(data).toString();
-  fetch(scriptURL + '?' + params, { mode: 'no-cors' })
-    .then(function() { window.location.href = 'thank.html'; })
-    .catch(function() { window.location.href = 'thank.html'; });
+  console.log('Submitting to:', scriptURL + '?' + params);
+  fetch(scriptURL + '?' + params, { 
+    method: 'GET',
+    mode: 'no-cors' 
+  })
+    .then(function() { 
+      console.log('Form submitted successfully');
+      window.location.href = 'thank.html'; 
+    })
+    .catch(function(err) { 
+      console.error('Submission error:', err);
+      window.location.href = 'thank.html'; 
+    });
 }
 document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');if(id.length>1){var t=document.querySelector(id);if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}}});});
 </script>
