@@ -848,7 +848,7 @@ function handleSubmit(btn){
   submitToSheets(d,btn);
 }
 function submitToSheets(data,btn){
-  var scriptURL='https://script.google.com/macros/s/AKfycbx9DSJhtYFoZzHtTHQMKuBt7GDcwrR_l71mXbR8hwKEATMmbOhoNVNKlfcRMPS4DJg/exec';
+  var scriptURL='YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
   data.submittedAt = new Date().toLocaleString();
   var params = new URLSearchParams(data).toString();
   fetch(scriptURL + '?' + params, { mode: 'no-cors' })
