@@ -42,10 +42,10 @@ img{display:block;max-width:100%}
 .nav-links a:hover{color:#fff}
 .nav-cta{background:var(--gold);color:var(--night) !important;padding:0.55rem 1.25rem;font-size:0.68rem !important;letter-spacing:0.12em !important;border-radius:8px;font-weight:600;transition:background .2s !important;white-space:nowrap;flex-shrink:0;line-height:1.4;display:inline-block}
 .nav-cta:hover{background:var(--gold2) !important}
-.hero{position:relative;display:grid;grid-template-columns:55fr 45fr;min-height:100vh;padding-top:68px;background:var(--night);overflow:hidden}
+.hero{position:relative;display:flex;align-items:center;justify-content:center;min-height:100vh;padding-top:68px;background:var(--night);overflow:hidden}
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}
 .hero-scrim{position:absolute;inset:0;z-index:1;background:linear-gradient(to right,rgba(0,0,0,0.72) 0%,rgba(0,0,0,0.4) 60%,rgba(0,0,0,0.2) 100%)}
-.hero-left{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:4rem var(--g)}
+.hero-left{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:4rem var(--g);max-width:900px;text-align:center;align-items:center}
 .hero-eyebrow{font-size:0.72rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold2);margin-bottom:1rem}
 .hero-title{font-family:var(--serif);font-size:clamp(3rem,5vw,5.5rem);font-weight:700;line-height:1.06;color:#FFFFFF;letter-spacing:0.005em;margin-bottom:1rem;text-shadow:0 3px 24px rgba(0,0,0,0.55)}
 .hero-sub{font-family:var(--serif);font-size:1.15rem;font-style:italic;color:rgba(255,255,255,0.85);margin-bottom:1.5rem;max-width:480px}
@@ -252,8 +252,7 @@ img{display:block;max-width:100%}
   .nav{padding:0.4rem 0.4rem 0.4rem 1rem}.nav-logo{height:36px}.nav-links{display:none}
   .nav-cta{font-size:0 !important;padding:0.45rem 0.85rem}
   .nav-cta::after{content:'Consult Free';font-size:0.62rem;letter-spacing:0.08em;font-weight:600}
-  .hero{grid-template-columns:1fr}.hero-left{padding:5rem 1.6rem 3rem}.hero-right{padding:2rem 1.6rem 4rem}
-  .hero-form-card{max-width:100%}
+  .hero{display:flex}.hero-left{padding:5rem 1.6rem 3rem}
   .hero-scrim{background:rgba(0,0,0,0.62)}
   .about-grid,.form-layout{grid-template-columns:1fr;gap:3rem}
   .about-imgs{height:280px}
@@ -317,42 +316,6 @@ img{display:block;max-width:100%}
         <span class="hstat-n"></span>
         <div class="hstat-l" style="font-size: 10px !important;">Hundreds of Weddings Delivered</div>
       </div>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="hero-form-card">
-      <h3>Request a Personalised Wedding Proposal</h3>
-      <p class="form-sub">Response within 24 hours</p>
-      <div class="fg"><label>Your Name *</label><input type="text" name="fullName" placeholder="Full name" id="hFullName" required/></div>
-      <div class="fg"><label>Email Address *</label><input type="email" name="email" placeholder="you@email.com" id="hEmail" required/></div>
-      <div class="fg"><label>Phone / WhatsApp *</label><input type="tel" name="phone" placeholder="+1 (___) ___-____" id="hPhone" required/></div>
-      <div class="fg"><label>Wedding Date</label><input type="date" name="weddingDate" style="color-scheme:dark" id="hDate"/></div>
-      <div class="fg">
-        <label>Estimated Guest Count *</label>
-        <select name="guestCount" id="hGuests" required>
-          <option value="">Select</option>
-          <option>Under 50</option>
-          <option>50 – 100</option>
-          <option>100 – 200</option>
-          <option>200 – 350</option>
-          <option>350 – 500</option>
-          <option>500+</option>
-        </select>
-      </div>
-      <div class="fg"><label>Budget</label><input type="text" name="budget" placeholder="e.g. $50,000 – $100,000" id="hBudget"/></div>
-      <div class="fg">
-        <label>Preferred Destination</label>
-        <select name="destination" id="hDest">
-          <option value="">Select</option>
-          <option>Los Cabos</option>
-          <option>Cancún</option>
-          <option>Puerto Vallarta</option>
-          <option>Punta Cana</option>
-          <option>Not sure yet</option>
-        </select>
-      </div>
-      <button class="form-btn" onclick="handleHeroSubmit(this)">Request a Personalised Wedding Proposal</button>
-      <p class="form-note">Your details remain private. A dedicated specialist will respond within 24 hours, no spam, no obligation.</p>
     </div>
   </div>
 </div>
